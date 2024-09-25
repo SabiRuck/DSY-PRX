@@ -1,0 +1,45 @@
+CREATE DATABASE pokus CHARACTER SET utf8 COLLATE utf8_general_ci;
+DROP DATABASE pokus;
+
+
+CREATE DATABASE trieda CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+CREATE TABLE uzivatelia (
+    id_uzivatel int(12) AUTO_INCREMENT,
+    meno varchar(60),
+    priezvisko varchar(60),
+    vek int(10),
+PRIMARY KEY(id_uzivatel)
+);
+
+DROP TABLE uzivatelia
+
+INSERT INTO uzivatelia (
+    meno,
+    priezvisko,
+    vek)
+    
+    VALUES
+    ("Janko", "Hrasko", 18),
+    ("Fero", "Mrkva", 15),
+    ("Ivan", "Kapusta", 16),
+    ("Peter", "Celer", 15),
+    ("Ondrej", "Slivka", 17);
+
+DELETE FROM uzivatelia;
+
+DELETE FROM uzivatelia WHERE id_uzivatel = 2;
+
+(vek>15 AND VEK<18) 
+
+CREATE TABLE spoluziaci(
+    id_spoluziaka int(3) AUTO_INCREMENT,
+    meno varchar(60),
+    priezvisko varchar(60),
+    vek int(3),
+    pocet_surodencov int(3),
+PRIMARY KEY (id_spoluziaka)
+);
+
+SELECT * FROM uloha WHERE meno = "Ivan";
+SELECT meno, priezvisko, vek FROM uloha WHERE meno = "Ivan";
