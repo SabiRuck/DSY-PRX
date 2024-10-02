@@ -41,6 +41,29 @@ CREATE TABLE spoluziaci(
 PRIMARY KEY (id_spoluziaka)
 );
 
+INSERT INTO osoba(
+    meno,
+    priezvisko,
+    vek,
+    adresa,
+    okres)
+    VALUES
+    ("Petra", "Školová", 16, "Oščadnica 2066", "Čadca"),
+    ("Sabína", "Rucková", 16, "SNP 738/18", "Čadca"),
+    ("Andrea", "Školová", 40, "Oščadnica 2066", "Čadca"),
+    ("Andreas", "Škola", 10, "Oščadnica 2066", "Čadca"),
+    ("Peter", "Škola", 41, "Oščadnica 2066", "Čadca"),
+    ("Ľubomíra", "Buchtová", 57, "Oščadnica 1141", "Čadca"),
+    ("Ondrej", "Priehoda", 21, "Olešná 23", "Čadca"),
+    ("Jozef", "Privarčák", 63, "Hliny 8", "Žilina"),
+    ("Oliver", "Pawlus", 17, "M.R.Štefánika", "Čadca"),
+    ("Ľubomír", "Blahovec", 80, "Solinky 9", "Žilina"),
+    ("Patrícia", "Poláčková", 19, "VLčince 10", "Žilina"),
+    ("Veronika", "Chlebeková", 79, "Oščadnica 234", "Čadca"),
+    ("Martin", "Kukučka", 36, "Hviezdoslavova 4", "Čadca"),
+    ("Michaela", "Turčan", 27, "Rázusová 18/5", "Čadca"),
+    ("Slavomír", "Svent", 16, "Podunajské Biskupice 8", "Brastislava");
+
 SELECT * FROM uloha WHERE meno = "Ivan";
 SELECT meno, priezvisko, vek FROM uloha WHERE meno = "Ivan";
 UPDATE uzivatelie SET meno="ivan" WHERE id=4 
