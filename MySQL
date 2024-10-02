@@ -47,8 +47,8 @@ UPDATE uzivatelie SET meno="ivan" WHERE id=4
 SELECT * FROM osoba WHERE vek LIKE "C_a%"; 
 SELECT * FROM osoba WHERE vek BETWEEN 20 and 30;
 SELECT * FROM osoba WHERE meno IN ("Oliver", "Sabina");
-SELECT * FROM osoba order by meno;
-SELECT * FROM osoba order by meno DESC;
+SELECT * FROM osoba ORDER BY meno;
+SELECT * FROM osoba ORDER BY meno DESC;
 SELECT * FROM osoba WHERE vek BETWEEN 17 and 21 ORDER BY priezvisko;
 SELECT * FROM osoba ORDER BY vek DESC LIMIT 3;
 
