@@ -43,3 +43,4 @@ PRIMARY KEY (id_spoluziaka)
 
 SELECT * FROM uloha WHERE meno = "Ivan";
 SELECT meno, priezvisko, vek FROM uloha WHERE meno = "Ivan";
+UPDATE uzivatelie SET meno="ivan" WHERE id=4 
