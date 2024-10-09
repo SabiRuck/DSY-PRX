@@ -60,3 +60,10 @@ SELECT MAX(vek) FROM osoba;
 
 SELECT meno FROM osoba GROUP BY meno;
 SELECT meno,COUNT(*) FROM osoba GROUP BY meno;
+SELECT meno, COUNT(*) AS pocet FROM `osoba` GROUP BY meno;
+
+SELECT CONCAT(meno," ",priezvisko) AS cele_meno, vek FROM osoba;
+SELECT REPLACE(CONCAT(meno,"-",priezvisko),"-", " ") AS celeMeno, vek FROM osoba;
+SELECT * FROM `osoba` WHERE vek = (SELECT MAX(vek) FROM osoba);
+SELECT meno, COUNT(*) AS pocet_opakovani FROM osoba GROUP BY vek HAVING vek>16;
+SELECT SUBSTRING_INDEX(CONCAT(meno,"-",priezvisko), "-", 1) AS meno,SUBSTRING_INDEX(CONCAT(meno,"-",priezvisko), "-", -1) AS priezvisko, vek FROM osoba;
