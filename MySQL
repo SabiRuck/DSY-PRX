@@ -69,7 +69,7 @@ SELECT meno, COUNT(*) AS pocet_opakovani FROM osoba GROUP BY vek HAVING vek>16;
 SELECT SUBSTRING_INDEX(CONCAT(meno,"-",priezvisko), "-", 1) AS meno,SUBSTRING_INDEX(CONCAT(meno,"-",priezvisko), "-", -1) AS priezvisko, vek FROM osoba;
 
 ALTER TABLE table_name ADD PRIMARY KEY (column_name);
-ALTER TABLE table_name ADD CONSTRAINT fk_name FOREIGN KEY (foreign_key_column) REFERENCES parent_table (primary_key_column);
+ALTER TABLE table_name ADD FOREIGN KEY (foreign_key_column) REFERENCES parent_table (primary_key_column);
 FOREIGN KEY (id_user_fk) REFERENCES users(id_user);
 FOREIGN KEY (column_name) REFERENCES other_table(column_name) ON DELETE SET NULL
 FOREIGN KEY (column_name) REFERENCES other_table(column_name) ON DELETE CASCADE
