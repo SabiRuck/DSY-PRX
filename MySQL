@@ -73,3 +73,5 @@ ALTER TABLE table_name ADD FOREIGN KEY (foreign_key_column) REFERENCES parent_ta
 FOREIGN KEY (id_user_fk) REFERENCES users(id_user);
 FOREIGN KEY (column_name) REFERENCES other_table(column_name) ON DELETE SET NULL
 FOREIGN KEY (column_name) REFERENCES other_table(column_name) ON DELETE CASCADE
+
+SELECT film.názov AS nazov_filmu, film.rok AS rok_vydania, GROUP_CONCAT(CONCAT(herec.meno ," ", herec.priezvisko) SEPARATOR ",") AS herec FROM film INNER JOIN film_herec ON film.id_Film = film_herec.id_Film INNER JOIN herec ON film_herec.id_Herec = herec.id_herec GROUP BY film.id_film;
