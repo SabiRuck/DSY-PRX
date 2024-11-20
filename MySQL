@@ -74,4 +74,11 @@ FOREIGN KEY (id_user_fk) REFERENCES users(id_user);
 FOREIGN KEY (column_name) REFERENCES other_table(column_name) ON DELETE SET NULL
 FOREIGN KEY (column_name) REFERENCES other_table(column_name) ON DELETE CASCADE
 
+peta-
 SELECT film.názov AS nazov_filmu, film.rok AS rok_vydania, GROUP_CONCAT(CONCAT(herec.meno ," ", herec.priezvisko) SEPARATOR ",") AS herec FROM film INNER JOIN film_herec ON film.id_Film = film_herec.id_Film INNER JOIN herec ON film_herec.id_Herec = herec.id_herec GROUP BY film.id_film;
+
+sabi-
+SELECT film.nazov AS "nazov filmu", film.rok AS "rok vydania", 
+GROUP_CONCAT(CONCAT(herec.meno, " ", herec.priezvisko) separator ',') AS "herci" FROM film 
+INNER JOIN film_herec ON film.id_film=film_herec.id_Film 
+INNER JOIN herec on film_herec.id_Herec=herec.id_herec GROUP BY film_herec.id_film;
