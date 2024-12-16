@@ -85,6 +85,13 @@ FOREIGN KEY(id_status) REFERENCES order_status(id_status),
 FOREIGN KEY(id_address) REFERENCES address(id_address)
 );
 
+CREATE TABLE address(
+    id_address int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    street varchar(100),
+    city varchar(50),
+    psc varchar(10),
+    country varchar(30));
+
 CREATE TABLE order_items(
     id_order_item int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
     id_order int(12),
@@ -96,12 +103,6 @@ FOREIGN KEY(id_order) REFERENCES orders(id_order),
 FOREIGN KEY(id_product) REFERENCES products(id_product),
 FOREIGN KEY (id_type) REFERENCES baking_method(id_baking_method));
     
-CREATE TABLE address(
-    id_address int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    street varchar(100),
-    city varchar(50),
-    psc varchar(10),
-    country varchar(30));
 
 CREATE TABLE payment_method(
     id_metod int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
@@ -114,7 +115,7 @@ CREATE TABLE payments(
     amount decimal(10,2),
     date_of_payment datetime,
 FOREIGN KEY(id_order) REFERENCES orders(id_order),
-FOREIGN KEY(id_pay_metod) REFERENCES payment_metod(id_metod));
+FOREIGN KEY(id_pay_metod) REFERENCES payment_method(id_metod));
 
 CREATE TABLE reviews(
     id_review int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
