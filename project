@@ -3,8 +3,8 @@ CREATE TABLE users (
     id_user INT(12) PRIMARY KEY AUTO_INCREMENT NOT NULL,
     name VARCHAR(60),
     last_name VARCHAR(60),
-    mail VARCHAR(100),
-    phone_number VARCHAR(30),
+    mail VARCHAR(100) UNIQUE,
+    phone_number VARCHAR(30) UNIQUE,
     password_ VARCHAR(64),
     registration_date DATETIME
 );
@@ -29,9 +29,16 @@ CREATE TABLE products(
     description TEXT,
     price decimal(10,2),
     id_baking_method int(12),
-    quantity_in_stock int(15),
+    in_stock int(15),
 FOREIGN KEY(id_baking_method) REFERENCES baking_method(id_baking_method)
 );
+
+CREATE TABLE baking_method_product(
+    id_baking_met_product int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    id_product int(12),
+    id_method int(12),
+FOREIGN KEY(id_product) REFERENCES products(id_product),
+FOREIGN KEY(id_method) REFERENCES baking_method(id_baking_method));
 
 CREATE TABLE flavour_product(
     id_flavour_product int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
@@ -45,8 +52,10 @@ CREATE TABLE basket_items(
     id_basket int(12),
     id_product int(12),
     quantity int(10) DEFAULT 1,
+    id_type int(12),
 FOREIGN KEY(id_product) REFERENCES products(id_product),
-FOREIGN KEY (id_basket) REFERENCES basket(id_basket)
+FOREIGN KEY (id_basket) REFERENCES basket(id_basket),
+FOREIGN KEY (id_type) REFERENCES baking_method(id_baking_method)
 );
 
 CREATE TABLE allergens(
@@ -68,10 +77,12 @@ CREATE TABLE orders(
     id_order int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
     id_user int(12),
     order_date datetime,
+    id_address int(12),
     total_price decimal(10,2),
-    o_status int(12), 
+    id_status int(12), 
 FOREIGN KEY(id_user) REFERENCES users(id_user),
-FOREIGN KEY(o_status) REFERENCES order_status(id_status)
+FOREIGN KEY(id_status) REFERENCES order_status(id_status),
+FOREIGN KEY(id_address) REFERENCES address(id_address)
 );
 
 CREATE TABLE order_items(
@@ -79,20 +90,20 @@ CREATE TABLE order_items(
     id_order int(12),
     id_product int(12),
     quantity int(10),
-    total_products_price int(15),
+    id_type int(12),
+    total_products_price decimal(10,2),
 FOREIGN KEY(id_order) REFERENCES orders(id_order),
-FOREIGN KEY(id_product) REFERENCES products(id_product));
+FOREIGN KEY(id_product) REFERENCES products(id_product),
+FOREIGN KEY (id_type) REFERENCES baking_method(id_baking_method));
     
 CREATE TABLE address(
     id_address int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    id_order int(12),
     street varchar(100),
     city varchar(50),
     psc varchar(10),
-    country varchar(30),
-FOREIGN KEY(id_order) REFERENCES orders(id_order));
+    country varchar(30));
 
-CREATE TABLE payment_metod(
+CREATE TABLE payment_method(
     id_metod int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
     metod varchar(20));
     
@@ -100,7 +111,7 @@ CREATE TABLE payments(
     id_payment int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
     id_order int(12),
     id_pay_metod int(12),
-    ammount int(10,2),
+    amount decimal(10,2),
     date_of_payment datetime,
 FOREIGN KEY(id_order) REFERENCES orders(id_order),
 FOREIGN KEY(id_pay_metod) REFERENCES payment_metod(id_metod));
@@ -108,9 +119,10 @@ FOREIGN KEY(id_pay_metod) REFERENCES payment_metod(id_metod));
 CREATE TABLE reviews(
     id_review int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
     id_user int(12),
-    id_order int(12),
+    id_order int(12) UNIQUE,
     rating int(3),
+    title varchar(40),
     review_text text,
-    review_date datetime),
+    review_date datetime,
 FOREIGN KEY(id_user) REFERENCES users(id_user),
 FOREIGN KEY(id_order) REFERENCES orders(id_order));
