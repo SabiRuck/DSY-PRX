@@ -48,7 +48,7 @@ FOREIGN KEY(id_product) REFERENCES products(id_product),
 FOREIGN KEY(id_flavour) REFERENCES flavours(id_flavour));
 
 CREATE TABLE basket_items(
-    id_basket_item int(12) AUTO_INCREMENT NOT NULL,
+    id_basket_item int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
     id_basket int(12),
     id_product int(12),
     quantity int(10) DEFAULT 1,
