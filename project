@@ -130,7 +130,7 @@ CREATE TABLE payments(
     id_pay_method int(12),
     amount decimal(10,2),
     date_of_payment datetime,
-FOREIGN KEY(id_order) REFERENCES orders(id_order),
+FOREIGN KEY(id_payment) REFERENCES orders(id_order),
 FOREIGN KEY(id_pay_method) REFERENCES payment_method(id_method));
 
 CREATE TABLE reviews(
