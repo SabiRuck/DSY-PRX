@@ -5,7 +5,7 @@ CREATE TABLE users (
     last_name VARCHAR(60),
     mail VARCHAR(100) UNIQUE,
     phone_number VARCHAR(30) UNIQUE,
-    password_ VARCHAR(64),
+    user_password VARCHAR(64),
     registration_date DATETIME
 );
 
@@ -22,16 +22,28 @@ CREATE TABLE flavours(
     id_flavour int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
     flavour varchar(40)
     );
-    
+CREATE TABLE in_package(
+    id_in_pack int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    number int(10));
+
 CREATE TABLE products(
     id_product int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
     product_name varchar(100),
     description TEXT,
-    price decimal(10,2),
+    price_piece decimal(10,2),
     id_baking_method int(12),
     in_stock int(15),
+    special int(2),
 FOREIGN KEY(id_baking_method) REFERENCES baking_method(id_baking_method)
 );
+
+CREATE TABLE in_pack_product(
+    id_pack_prod int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    id_product int(12),
+    id_in_pack int(12),
+    cost decimal(10, 2),
+FOREIGN KEY(id_product) REFERENCES products(id_product),
+FOREIGN KEY(id_in_pack) REFERENCES in_package(id_in_pack));
 
 CREATE TABLE baking_method_product(
     id_baking_met_product int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
@@ -53,6 +65,8 @@ CREATE TABLE basket_items(
     id_product int(12),
     quantity int(10) DEFAULT 1,
     id_type int(12),
+    id_in_pack int(12),
+FOREIGN KEY(id_in_pack) REFERENCES in_package(id_in_pack),
 FOREIGN KEY(id_product) REFERENCES products(id_product),
 FOREIGN KEY (id_basket) REFERENCES basket(id_basket),
 FOREIGN KEY (id_type) REFERENCES baking_method(id_baking_method)
@@ -99,23 +113,25 @@ CREATE TABLE order_items(
     quantity int(10),
     id_type int(12),
     total_products_price decimal(10,2),
+    id_in_pack int(12),
+FOREIGN KEY(id_in_pack) REFERENCES in_package(id_in_pack),
 FOREIGN KEY(id_order) REFERENCES orders(id_order),
 FOREIGN KEY(id_product) REFERENCES products(id_product),
 FOREIGN KEY (id_type) REFERENCES baking_method(id_baking_method));
     
 
 CREATE TABLE payment_method(
-    id_metod int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    metod varchar(20));
+    id_method int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    method varchar(20));
     
 CREATE TABLE payments(
     id_payment int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
     id_order int(12),
-    id_pay_metod int(12),
+    id_pay_method int(12),
     amount decimal(10,2),
     date_of_payment datetime,
 FOREIGN KEY(id_order) REFERENCES orders(id_order),
-FOREIGN KEY(id_pay_metod) REFERENCES payment_method(id_metod));
+FOREIGN KEY(id_pay_method) REFERENCES payment_method(id_method));
 
 CREATE TABLE reviews(
     id_review int(12) AUTO_INCREMENT NOT NULL PRIMARY KEY,
