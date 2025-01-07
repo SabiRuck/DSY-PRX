@@ -1,0 +1,20 @@
+SELECT products.product_name FROM products JOIN flavour_product ON products.id_product = flavour_product.id_product WHERE flavour_product.id_flavour = 1;
+
+SELECT CONCAT(users.name, ' ', users.last_name) AS full_name, 
+  SUM(basket_items.quantity) AS total_items 
+  FROM users JOIN basket ON basket.id_basket = users.id_user 
+  JOIN basket_items ON basket.id_basket = basket_items.id_basket GROUP BY users.id_user;
+
+SELECT 
+    CONCAT(users.name, ' ', users.last_name) AS full_name,
+    GROUP_CONCAT(products.product_name SEPARATOR ', ') AS cookies
+FROM users  JOIN basket ON basket.id_basket = users.id_user
+JOIN basket_items ON basket_items.id_basket = basket.id_basket
+JOIN products ON basket_items.id_product = products.id_product
+WHERE users.id_user = 1;
+
+SELECT product_name FROM products WHERE id_baking_method = 2;
+
+SELECT allergens.allergen FROM allergens
+JOIN allergen_product ON allergen_product.id_allergen = allergens.id_allergen
+JOIN products ON allergen_product.id_product = products.id_product WHERE products.id_product = 1;
