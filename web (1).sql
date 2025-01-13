@@ -167,20 +167,19 @@ CREATE TABLE `basket_items` (
   `id_basket_item` int(12) NOT NULL,
   `id_basket` int(12) DEFAULT NULL,
   `id_product` int(12) DEFAULT NULL,
-  `quantity` int(10) DEFAULT 1,
-  `id_in_pack` int(12) DEFAULT NULL
+  `quantity` int(10) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `basket_items`
 --
 
-INSERT INTO `basket_items` (`id_basket_item`, `id_basket`, `id_product`, `quantity`, `id_in_pack`) VALUES
-(1, 1, 1, 2, 1),
-(2, 1, 2, 3, 2),
-(3, 2, 3, 1, 3),
-(4, 3, 5, 5, 4),
-(5, 4, 7, 4, 1);
+INSERT INTO `basket_items` (`id_basket_item`, `id_basket`, `id_product`, `quantity`) VALUES
+(1, 1, 1, 2),
+(2, 1, 2, 3),
+(3, 2, 3, 1),
+(4, 3, 5, 3),
+(5, 4, 7, 2);
 
 -- --------------------------------------------------------
 
@@ -239,73 +238,6 @@ INSERT INTO `flavour_product` (`id_flavour_product`, `id_product`, `id_flavour`)
 (10, 6, 1),
 (11, 7, 2);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `in_package`
---
-
-CREATE TABLE `in_package` (
-  `id_in_pack` int(12) NOT NULL,
-  `number` int(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `in_package`
---
-
-INSERT INTO `in_package` (`id_in_pack`, `number`) VALUES
-(1, 5),
-(2, 8),
-(3, 10),
-(4, 15),
-(5, 20),
-(6, 12);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `in_pack_product`
---
-
-CREATE TABLE `in_pack_product` (
-  `id_pack_prod` int(12) NOT NULL,
-  `id_product` int(12) DEFAULT NULL,
-  `id_in_pack` int(12) DEFAULT NULL,
-  `cost` decimal(10,2) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `in_pack_product`
---
-
-INSERT INTO `in_pack_product` (`id_pack_prod`, `id_product`, `id_in_pack`, `cost`) VALUES
-(1, 1, 1, 7.25),
-(2, 1, 2, 11.25),
-(3, 1, 3, 14.00),
-(4, 1, 4, 19.70),
-(5, 1, 5, 25.00),
-(6, 2, 1, 6.25),
-(7, 2, 2, 9.70),
-(8, 2, 3, 12.00),
-(9, 2, 4, 17.50),
-(10, 2, 5, 22.00),
-(11, 3, 1, 8.50),
-(12, 3, 3, 15.50),
-(13, 3, 4, 22.00),
-(14, 4, 1, 7.00),
-(15, 4, 2, 11.00),
-(16, 4, 6, 15.80),
-(17, 5, 2, 13.20),
-(18, 5, 6, 18.60),
-(19, 6, 1, 9.00),
-(20, 6, 3, 17.00),
-(21, 6, 5, 22.00),
-(22, 7, 1, 9.00),
-(23, 7, 3, 17.00),
-(24, 7, 4, 22.50);
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `orders`
@@ -325,11 +257,11 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id_order`, `id_user`, `order_date`, `id_address`, `total_price`, `id_status`) VALUES
-(1, 2, '2024-12-10 10:00:00', 1, 36.20, 3),
-(2, 3, '2024-12-13 12:00:00', 2, 29.00, 3),
-(3, 1, '2024-12-20 16:40:00', 3, 26.40, 3),
-(4, 5, '2025-01-04 15:30:00', 4, 32.95, 2),
-(5, 3, '2025-01-03 14:20:00', 2, 41.45, 2);
+(1, 2, '2024-12-10 10:00:00', 1, 49.00, 3),
+(2, 3, '2024-12-13 12:00:00', 2, 30.50, 3),
+(3, 1, '2024-12-20 16:40:00', 3, 33.00, 3),
+(4, 5, '2025-01-04 15:30:00', 4, 59.50, 2),
+(5, 3, '2025-01-03 14:20:00', 2, 49, 2);
 
 -- --------------------------------------------------------
 
@@ -342,27 +274,25 @@ CREATE TABLE `order_items` (
   `id_order` int(12) DEFAULT NULL,
   `id_product` int(12) DEFAULT NULL,
   `quantity` int(10) DEFAULT NULL,
-  `total_products_price` decimal(10,2) DEFAULT NULL,
-  `id_in_pack` int(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `order_items`
 --
 
-INSERT INTO `order_items` (`id_order_item`, `id_order`, `id_product`, `quantity`, `total_products_price`, `id_in_pack`) VALUES
-(10, 1, 1, 1, 14.00, 3),
-(11, 1, 5, 1, 13.20, 2),
-(12, 1, 6, 1, 9.00, 1),
-(13, 2, 7, 1, 17.00, 3),
-(14, 2, 2, 1, 12.00, 3),
-(15, 3, 5, 2, 26.40, 2),
-(16, 4, 6, 1, 17.00, 3),
-(17, 4, 1, 2, 9.70, 2),
-(18, 4, 2, 1, 6.25, 1),
-(19, 5, 7, 1, 17.00, 3),
-(20, 5, 1, 1, 11.25, 2),
-(21, 5, 5, 1, 13.20, 2);
+INSERT INTO `order_items` (`id_order_item`, `id_order`, `id_product`, `quantity`) VALUES
+(10, 1, 1, 1),
+(11, 1, 5, 1),
+(12, 1, 6, 1),
+(13, 2, 7, 1),
+(14, 2, 2, 1),
+(15, 3, 5, 2),
+(16, 4, 6, 1),
+(17, 4, 1, 2),
+(18, 4, 2, 1),
+(19, 5, 7, 1),
+(20, 5, 1, 1),
+(21, 5, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -404,11 +334,11 @@ CREATE TABLE `payments` (
 --
 
 INSERT INTO `payments` (`id_payment`, `id_pay_method`, `amount`, `date_of_payment`) VALUES
-(1, 2, 36.20, '2024-12-10 10:00:00'),
-(2, 1, 29.00, '2024-12-13 12:00:00'),
-(3, 2, 26.40, '2024-12-20 16:40:00'),
-(4, 1, 32.95, '2025-01-04 15:30:00'),
-(5, 1, 41.45, '2025-01-03 14:20:00');
+(1, 2, 49.00, '2024-12-10 10:00:00'),
+(2, 1, 30.50, '2024-12-13 12:00:00'),
+(3, 2, 33.00, '2024-12-20 16:40:00'),
+(4, 1, 59.50, '2025-01-04 15:30:00'),
+(5, 1, 49, '2025-01-03 14:20:00');
 
 -- --------------------------------------------------------
 
@@ -442,6 +372,7 @@ CREATE TABLE `products` (
   `product_name` varchar(100) DEFAULT NULL,
   `description` text DEFAULT NULL,
   `price_piece` decimal(10,2) DEFAULT NULL,
+  `price` decimal(10,2) DEFAULT NULL, 
   `id_baking_method` int(12) DEFAULT NULL,
   `in_stock` int(15) DEFAULT NULL,
   `special` int(2) DEFAULT NULL
@@ -452,13 +383,13 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id_product`, `product_name`, `description`, `price_piece`, `id_baking_method`, `in_stock`, `special`) VALUES
-(1, 'Brownie Cookie', 'A delicious chocolate brownie cookie with a fudgy center and crisp edges.', 1.45, 1, 100, 0),
-(2, 'Chocolate Chip Cookie', 'Classic soft and chewy cookie loaded with chocolate chips.', 1.25, 1, 150, 0),
-(3, 'Caramel Chocolate Cookie', 'A rich and gooey caramel-filled chocolate cookie topped with a sprinkle of sea salt.', 1.70, 1, 80, 0),
-(4, 'Peanut Butter Cookie', 'A soft and chewy cookie made with creamy peanut butter and a hint of vanilla.', 1.40, 1, 120, 0),
-(5, 'Cinnamon Vanilla Cookie', 'A warm, spiced cookie with cinnamon and vanilla flavors, perfect for the holidays.', 1.65, 1, 90, 1),
-(6, 'Pistachio Chocolate Cookie', 'A crunchy cookie featuring pistachios and rich dark chocolate chunks.', 1.80, 1, 70, 0),
-(7, 'Vegan Caramel Chocolate Cookie', 'A rich and gooey vegan caramel-filled chocolate cookie topped with a sprinkle of sea salt, made with plant-based ingredients.', 1.80, 2, 80, 0);
+(1, 'Brownie Cookie', 'A delicious chocolate brownie cookie with a fudgy center and crisp edges.', 1.45, 14.50, 1, 100, 0),
+(2, 'Chocolate Chip Cookie', 'Classic soft and chewy cookie loaded with chocolate chips.', 1.25, 12.50, 1, 150, 0),
+(3, 'Caramel Chocolate Cookie', 'A rich and gooey caramel-filled chocolate cookie topped with a sprinkle of sea salt.', 1.70, 17.00, 1, 80, 0),
+(4, 'Peanut Butter Cookie', 'A soft and chewy cookie made with creamy peanut butter and a hint of vanilla.', 1.40, 14.00, 1, 120, 0),
+(5, 'Cinnamon Vanilla Cookie', 'A warm, spiced cookie with cinnamon and vanilla flavors, perfect for the holidays.', 1.65, 16.50, 1, 90, 1),
+(6, 'Pistachio Chocolate Cookie', 'A crunchy cookie featuring pistachios and rich dark chocolate chunks.', 1.80,18.00, 1, 70, 0),
+(7, 'Vegan Caramel Chocolate Cookie', 'A rich and gooey vegan caramel-filled chocolate cookie topped with a sprinkle of sea salt, made with plant-based ingredients.', 1.80, 18.00, 2, 80, 0);
 
 -- --------------------------------------------------------
 
@@ -552,7 +483,6 @@ ALTER TABLE `basket`
 --
 ALTER TABLE `basket_items`
   ADD PRIMARY KEY (`id_basket_item`),
-  ADD KEY `id_in_pack` (`id_in_pack`),
   ADD KEY `id_product` (`id_product`),
   ADD KEY `id_basket` (`id_basket`);
 
@@ -571,20 +501,6 @@ ALTER TABLE `flavour_product`
   ADD KEY `id_flavour` (`id_flavour`);
 
 --
--- Indexes for table `in_package`
---
-ALTER TABLE `in_package`
-  ADD PRIMARY KEY (`id_in_pack`);
-
---
--- Indexes for table `in_pack_product`
---
-ALTER TABLE `in_pack_product`
-  ADD PRIMARY KEY (`id_pack_prod`),
-  ADD KEY `id_product` (`id_product`),
-  ADD KEY `id_in_pack` (`id_in_pack`);
-
---
 -- Indexes for table `orders`
 --
 ALTER TABLE `orders`
@@ -598,7 +514,6 @@ ALTER TABLE `orders`
 --
 ALTER TABLE `order_items`
   ADD PRIMARY KEY (`id_order_item`),
-  ADD KEY `id_in_pack` (`id_in_pack`),
   ADD KEY `id_order` (`id_order`),
   ADD KEY `id_product` (`id_product`);
 
@@ -690,17 +605,6 @@ ALTER TABLE `flavours`
 ALTER TABLE `flavour_product`
   MODIFY `id_flavour_product` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
---
--- AUTO_INCREMENT for table `in_package`
---
-ALTER TABLE `in_package`
-  MODIFY `id_in_pack` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `in_pack_product`
---
-ALTER TABLE `in_pack_product`
-  MODIFY `id_pack_prod` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -771,7 +675,6 @@ ALTER TABLE `basket`
 -- Constraints for table `basket_items`
 --
 ALTER TABLE `basket_items`
-  ADD CONSTRAINT `basket_items_ibfk_1` FOREIGN KEY (`id_in_pack`) REFERENCES `in_package` (`id_in_pack`),
   ADD CONSTRAINT `basket_items_ibfk_2` FOREIGN KEY (`id_product`) REFERENCES `products` (`id_product`),
   ADD CONSTRAINT `basket_items_ibfk_3` FOREIGN KEY (`id_basket`) REFERENCES `basket` (`id_basket`);
 
@@ -782,12 +685,8 @@ ALTER TABLE `flavour_product`
   ADD CONSTRAINT `flavour_product_ibfk_1` FOREIGN KEY (`id_product`) REFERENCES `products` (`id_product`),
   ADD CONSTRAINT `flavour_product_ibfk_2` FOREIGN KEY (`id_flavour`) REFERENCES `flavours` (`id_flavour`);
 
+
 --
--- Constraints for table `in_pack_product`
---
-ALTER TABLE `in_pack_product`
-  ADD CONSTRAINT `in_pack_product_ibfk_1` FOREIGN KEY (`id_product`) REFERENCES `products` (`id_product`),
-  ADD CONSTRAINT `in_pack_product_ibfk_2` FOREIGN KEY (`id_in_pack`) REFERENCES `in_package` (`id_in_pack`);
 
 --
 -- Constraints for table `orders`
@@ -801,7 +700,6 @@ ALTER TABLE `orders`
 -- Constraints for table `order_items`
 --
 ALTER TABLE `order_items`
-  ADD CONSTRAINT `order_items_ibfk_1` FOREIGN KEY (`id_in_pack`) REFERENCES `in_package` (`id_in_pack`),
   ADD CONSTRAINT `order_items_ibfk_2` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id_order`),
   ADD CONSTRAINT `order_items_ibfk_3` FOREIGN KEY (`id_product`) REFERENCES `products` (`id_product`);
 
