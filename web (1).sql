@@ -273,7 +273,7 @@ CREATE TABLE `order_items` (
   `id_order_item` int(12) NOT NULL,
   `id_order` int(12) DEFAULT NULL,
   `id_product` int(12) DEFAULT NULL,
-  `quantity` int(10) DEFAULT NULL,
+  `quantity` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
