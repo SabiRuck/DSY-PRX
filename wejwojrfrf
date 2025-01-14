@@ -1,20 +1,73 @@
-SELECT products.product_name FROM products JOIN flavour_product ON products.id_product = flavour_product.id_product WHERE flavour_product.id_flavour = 1;
+//1 vymenuj produkty
+SELECT products.product_name, products.description, baking_method.type, products.price, products.in_stock FROM products 
+JOIN baking_method ON products.id_baking_method = baking_method.id_baking_method;
 
-SELECT CONCAT(users.name, ' ', users.last_name) AS full_name, 
-  SUM(basket_items.quantity) AS total_items 
-  FROM users JOIN basket ON basket.id_basket = users.id_user 
-  JOIN basket_items ON basket.id_basket = basket_items.id_basket GROUP BY users.id_user;
+//2 cokoladove susienky
+SELECT products.product_name AS products_with_chocolate FROM products 
+JOIN flavour_product ON products.id_product = flavour_product.id_product 
+JOIN flavours ON flavours.id_flavour = flavour_product.id_flavour WHERE flavours.flavour = "Chocolate";
 
-SELECT 
-    CONCAT(users.name, ' ', users.last_name) AS full_name,
-    GROUP_CONCAT(products.product_name SEPARATOR ', ') AS cookies
-FROM users  JOIN basket ON basket.id_basket = users.id_user
-JOIN basket_items ON basket_items.id_basket = basket.id_basket
-JOIN products ON basket_items.id_product = products.id_product
-WHERE users.id_user = 1;
+//3 kolko itemov maju uzivatelia v kosiku
+SELECT CONCAT(users.name, ' ', users.last_name) AS full_name, SUM(basket_items.quantity) AS total_items FROM users 
+JOIN basket ON basket.id_basket = users.id_user 
+JOIN basket_items ON basket.id_basket = basket_items.id_basket GROUP BY users.id_user;
 
-SELECT product_name FROM products WHERE id_baking_method = 2;
+//4 alergeny produktov
+SELECT products.id_product, products.product_name AS "product", 
+GROUP_CONCAT(allergens.allergen SEPARATOR ', ') AS "allergen" FROM allergens 
+JOIN allergen_product ON allergen_product.id_allergen = allergens.id_allergen 
+JOIN products ON allergen_product.id_product = products.id_product GROUP BY products.id_product;
 
+//5 vegan 
+SELECT products.product_name AS vegan_products FROM baking_method 
+JOIN products ON products.id_baking_method = baking_method.id_baking_method WHERE baking_method.type = "Vegan";
+
+//6 alergeny prveho produktu
 SELECT allergens.allergen FROM allergens
 JOIN allergen_product ON allergen_product.id_allergen = allergens.id_allergen
 JOIN products ON allergen_product.id_product = products.id_product WHERE products.id_product = 1;
+
+//7 review
+SELECT CONCAT(users.name, ' ', users.last_name) AS full_name, reviews.title, reviews.rating, reviews.review_text, reviews.review_date FROM reviews 
+JOIN users ON reviews.id_user = users.id_user ORDER BY reviews.review_date DESC;
+
+//8 products by price
+SELECT products.product_name, products.price_piece FROM products ORDER BY products.price_piece;
+
+//9 adresy na balik
+SELECT CONCAT(users.name, ' ', users.last_name) AS full_name, address.street, address.city, address.psc, address.country FROM users
+JOIN orders ON users.id_user = orders.id_user
+JOIN address ON orders.id_address = address.id_address GROUP BY address.id_address;
+
+//10 speci susienky
+SELECT products.product_name FROM products WHERE products.special = 1;
+
+//11 susienky pod 17
+SELECT products.product_name, price FROM products WHERE products.price <= 17 ORDER BY price;
+
+//12 hodnotenia
+SELECT products.product_name, ROUND(AVG(reviews.rating), 2) AS priemer_hodnotenia FROM products
+LEFT JOIN order_items ON products.id_product = order_items.id_product
+LEFT JOIN reviews ON order_items.id_order = reviews.id_order GROUP BY products.product_name;
+
+//13 objednavky uzivatela 3
+SELECT orders.id_order, orders.order_date, orders.total_price, order_status.o_status AS order_status FROM orders 
+JOIN users ON orders.id_user = users.id_user 
+JOIN order_status ON orders.id_status = order_status.id_status WHERE users.id_user = 3;
+
+//14 produkty podla popularity
+SELECT products.product_name, COUNT(order_items.id_order_item) AS number_of_orders 
+FROM products LEFT JOIN order_items ON products.id_product = order_items.id_product 
+GROUP BY products.product_name ORDER BY number_of_orders DESC;
+
+//15 vsetky platby vsetkych
+SELECT CONCAT(users.name, ' ', users.last_name) AS full_name, payment_method.method, payments.amount, payments.date_of_payment FROM payments 
+JOIN payment_method ON payments.id_pay_method = payment_method.id_method 
+JOIN orders ON payments.id_payment = orders.id_order 
+JOIN users ON orders.id_user = users.id_user;
+
+//16 kosik uzivatela 1
+SELECT products.product_name, products.price, basket_items.quantity, products.price * basket_items.quantity AS "full_price" FROM products 
+JOIN basket_items ON products.id_product = basket_items.id_product 
+JOIN basket ON basket.id_basket = basket_items.id_basket
+JOIN users ON users.id_user = basket.id_basket WHERE users.id_user = 1;
