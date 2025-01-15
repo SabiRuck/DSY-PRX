@@ -45,28 +45,23 @@ SELECT products.product_name FROM products WHERE products.special = 1;
 //11 susienky pod 17
 SELECT products.product_name, price FROM products WHERE products.price <= 17 ORDER BY price;
 
-//12 hodnotenia
-SELECT products.product_name, ROUND(AVG(reviews.rating), 2) AS priemer_hodnotenia FROM products
-LEFT JOIN order_items ON products.id_product = order_items.id_product
-LEFT JOIN reviews ON order_items.id_order = reviews.id_order GROUP BY products.product_name;
-
-//13 objednavky uzivatela 3
+//12 objednavky uzivatela 3
 SELECT orders.id_order, orders.order_date, orders.total_price, order_status.o_status AS order_status FROM orders 
 JOIN users ON orders.id_user = users.id_user 
 JOIN order_status ON orders.id_status = order_status.id_status WHERE users.id_user = 3;
 
-//14 produkty podla popularity
+//13 produkty podla popularity
 SELECT products.product_name, COUNT(order_items.id_order_item) AS number_of_orders 
 FROM products LEFT JOIN order_items ON products.id_product = order_items.id_product 
 GROUP BY products.product_name ORDER BY number_of_orders DESC;
 
-//15 vsetky platby vsetkych
+//14 vsetky platby vsetkych
 SELECT CONCAT(users.name, ' ', users.last_name) AS full_name, payment_method.method, payments.amount, payments.date_of_payment FROM payments 
 JOIN payment_method ON payments.id_pay_method = payment_method.id_method 
 JOIN orders ON payments.id_payment = orders.id_order 
 JOIN users ON orders.id_user = users.id_user;
 
-//16 kosik uzivatela 1
+//15 kosik uzivatela 1
 SELECT products.product_name, products.price, basket_items.quantity, products.price * basket_items.quantity AS "full_price" FROM products 
 JOIN basket_items ON products.id_product = basket_items.id_product 
 JOIN basket ON basket.id_basket = basket_items.id_basket
