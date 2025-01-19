@@ -394,7 +394,7 @@ INSERT INTO `products` (`id_product`, `product_name`, `description`, `price_piec
 (4, 'Peanut Butter Cookie', 'A soft and chewy cookie made with creamy peanut butter and a hint of vanilla.', 1.40, 14.00, 1, 120, 0),
 (5, 'Cinnamon Vanilla Cookie', 'A warm, spiced cookie with cinnamon and vanilla flavors, perfect for the holidays.', 1.65, 16.50, 1, 90, 1),
 (6, 'Pistachio Chocolate Cookie', 'A crunchy cookie featuring pistachios and rich dark chocolate chunks.', 1.80, 18.00, 1, 70, 0),
-(7, 'Vegan Chocolat Salted Caramel Cookie\r\n', 'A rich and gooey vegan caramel-filled chocolate cookie topped with a sprinkle of sea salt, made with plant-based ingredients.', 1.80, 18.00, 2, 80, 0);
+(7, 'Vegan Chocolat Salted Caramel Cookie', 'A rich and gooey vegan caramel-filled chocolate cookie topped with a sprinkle of sea salt, made with plant-based ingredients.', 1.80, 18.00, 2, 80, 0);
 
 -- --------------------------------------------------------
 
