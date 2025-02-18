@@ -1,0 +1,48 @@
+<?php
+
+// $znamky = [1, 2, 3, 1, 5, 5, 1];
+// $sucet = 0;
+// $dlzka= count($znamky)-1;
+
+// for ($i=0; $i < $dlzka; $i++) { 
+//     $sucet = $sucet + $znamky[$i];
+// }
+// echo($sucet/$dlzka);
+
+$spolu=[1,55,61,4,11,8,10,12];
+$najvacsie = $spolu[0];
+$najmensie = $spolu[0];
+
+for ($i=0; $i < count($spolu)-1; $i++) { 
+    if($najvacsie < $spolu[$i])
+    {
+        $najvacsie = $spolu[$i];
+    }
+    if($najmensie > $spolu[$i])
+    {
+        $najmensie = $spolu[$i];
+    }
+}
+
+echo("najvacsie: $najvacsie  najmensie: $najmensie<br>");
+
+$a = $najmensie;
+$b = $najvacsie;
+echo("$a, ");
+
+for ($i=0; $i < count($spolu)-1; $i++) { 
+    for ($j=0; $j < count($spolu); $j++) {
+    	if($spolu[$j]>$a && $spolu[$j]<$b)
+    	{
+    		$b = $spolu[$j];
+    	}
+        
+    }
+    
+    
+            
+    echo("$b, ");
+    $a = $b;
+    $b = $najvacsie;
+}
+?>
