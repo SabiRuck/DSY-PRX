@@ -9,9 +9,33 @@
 // }
 // echo($sucet/$dlzka);
 
-$spolu=[1,55,61,4,11,8,10,12];
-$najvacsie = $spolu[0];
-$najmensie = $spolu[0];
+$spolu=[1, 3, 3, 5, 1];
+$spolu2 = [];
+
+$spolu2[] = $spolu[0];
+$z = 1;
+for ($i=0; $i < count($spolu); $i++) { 
+    for ($j=0; $j < count($spolu2); $j++) { 
+        if($spolu2[$j] == $spolu[$i] && $z != 0)
+        {
+            
+        }
+        else
+        {
+            $spolu2[] = $spolu[$i];
+            $z++;
+            echo("j - $spolu2[$j]  i - $spolu[$i]<br>");
+        }
+        echo ("<br>");
+    }
+    
+    $z = 0;
+}
+
+print_r($spolu2);
+
+$najvacsie = $spolu2[0];
+$najmensie = $spolu2[0];
 
 for ($i=0; $i < count($spolu)-1; $i++) { 
     if($najvacsie < $spolu[$i])
@@ -26,15 +50,27 @@ for ($i=0; $i < count($spolu)-1; $i++) {
 
 echo("najvacsie: $najvacsie  najmensie: $najmensie<br>");
 
+
+for ($i=0; $i < count($spolu2)-1; $i++) { 
+    if($najvacsie < $spolu2[$i])
+    {
+        $najvacsie = $spolu2[$i];
+    }
+    if($najmensie > $spolu2[$i])
+    {
+        $najmensie = $spolu2[$i];
+    }
+}
+
 $a = $najmensie;
 $b = $najvacsie;
 echo("$a, ");
 
-for ($i=0; $i < count($spolu)-1; $i++) { 
-    for ($j=0; $j < count($spolu); $j++) {
-    	if($spolu[$j]>$a && $spolu[$j]<$b)
+for ($i=0; $i < count($spolu2)-1; $i++) { 
+    for ($j=0; $j < count($spolu2); $j++) {
+    	if($spolu2[$j]>$a && $spolu2[$j]<$b)
     	{
-    		$b = $spolu[$j];
+    		$b = $spolu2[$j];
     	}
         
     }
