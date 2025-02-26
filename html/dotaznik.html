@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dotaznik</title>
+</head>
+<body>
+
+    
+    <fieldset>
+        <legend>General details</legend>
+        <label for="name">Name:</label>
+        <input type="text" name = "name" id="name"/><br>
+        <label for="email">Email:</label>
+        <input type="email" name = "email" id="email"/><br>
+        <label for="gender">Gender:</label>
+
+        <input type="radio" name="gender" id="gender"/>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="gender"/>
+        <label for="female">Female</label><br>
+
+        <label for="social">How did you hear about uz:</label>
+        <select name="social" id="social">
+            <optgroup>
+            <option value="">Search Engine</option>
+            <option value="">Social Media</option>
+            <option value="">Friend</option>
+            <option value="">Other</option>
+            </optgroup>
+        </select><br>
+
+        <label from="comments">Comments:</label><br>
+        <textarea name="comment" id="comment">
+        </textarea>
+        
+    </fieldset>
+
+    <fieldset>
+        <legend>User Account Details</legend>
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username"/><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password"/><br>
+
+        <label for="sub">Newsletter Subscriptions: </label>
+        <input type="checkbox" name="articles" id="sub"/>
+        <label for="">PHP Articles</label>
+        <input type="checkbox" name="news" id="sub"/>
+        <label for="">PHP News</label>
+    </fieldset>
+    <input type="submit" name="sebmit" id="submit"/>
+    <input type="reset" name="reset" id="reset"/>
+    
+    
+</body>
+</html>
