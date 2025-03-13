@@ -1,0 +1,38 @@
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+li {
+   background-image: url("../flexStars/stars/star.svg");
+   height: 16px;
+   width: 16px;
+   background-repeat: no-repeat;
+   margin: 2px;
+    padding: 0px;
+    background-position: center center;
+}
+
+
+ul:first-child li{
+    background-image: url("../flexStars/stars/star-active.svg");
+}
+
+ul:nth-child(-n+2) li:not(:last-child) {
+    background-image: url("../flexStars/stars/star-active.svg");
+  }
+
+ul:nth-child(-n+3) li:nth-child(-n+3){
+    background-image: url("../flexStars/stars/star-active.svg");
+}
+
+ul:nth-child(-n+4) li:nth-child(-n+2){
+    background-image: url("../flexStars/stars/star-active.svg");
+}
+
+
+ul:last-child li:first-child {
+    background-image: url("../flexStars/stars/star-active.svg");
+  }
+
