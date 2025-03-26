@@ -1,0 +1,16 @@
+h1, p , body, html, input, ul,li, a{
+    margin: 0;
+    padding: 0;
+}
+
+form{
+    padding: 60px 60px 60px 22px;
+    background-color: rgba(f, f, f, 0.20);
+}
+#container{
+    padding: 90px 40px 70px 90px;
+    background-color: #FEDCC5;
+    max-width: 1360px;
+    display: flex;
+    justify-content: space-between;
+}
