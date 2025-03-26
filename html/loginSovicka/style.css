@@ -1,16 +1,163 @@
-h1, p , body, html, input, ul,li, a{
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
+h1, p , body, html, input, ul,li, a, h2{
     margin: 0;
     padding: 0;
 }
+p{
+    display: inline-block;
+}
 
+section{
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("back.png");
+}
+
+#panel{
+    padding: 46px 60px 22px 43px;
+    background-color: rgba(255, 255, 255, 0.30);
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 335px;
+    gap:64px;
+
+    box-shadow: 0px 3px 50px rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(5px);
+    background-repeat: no-repeat;
+
+
+    
+}
 form{
-    padding: 60px 60px 60px 22px;
-    background-color: rgba(f, f, f, 0.20);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 #container{
     padding: 90px 40px 70px 90px;
-    background-color: #FEDCC5;
-    max-width: 1360px;
+    background-image: linear-gradient(to right, rgba(254, 220, 197, 0.3), rgba(255, 221, 198, 1));
+    max-width: 1202px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 14px;
+    border-radius: 24px;    
+    align-items: center;
+    gap: 73px;
+}
+
+#container img{
+    width: 674.46px;
+    height: 593.36px;
+}
+
+h1{
+    font-size: 48px;
+    font-family: 'Gilroy-Bold', sans-serif;
+}
+h2{
+    font-size: 18px;
+    font-family: 'Gilroy-Regular', sans-serif;
+    color:#F25019;
+}
+ul{
+    list-style-type:none;
+}
+
+#inputs ul{
+    font-size: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    
+    gap:16px;
+}
+#inputs{
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:16px;
+}
+#inputs li{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap:8px;
+}
+#inputs a{
+    align-self: flex-end;
+    color: #AE4700;
+}
+input[type="email"], input[type="password"]{
+    width: 319px;
+    height: 40px;
+    background-color: #fff;
+    border-width: 0px;
+    padding-left: 16px;
+    border-radius: 4px;
+    font-family: 'Gilroy-Medium', sans-serif;
+}
+input[type="email"]:placeholder, input[type="password"]:placeholder{
+    font-size: 13px;
+    color: #BFBFBF;
+    font-family: 'Gilroy-Medium', sans-serif;
+}
+#submit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:24px;
+}
+#submit ul{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    
+}
+#submit li{
+    background-color: #fff;
+    width: 72px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 28px;
+    font-size:19px
+}
+#submit svg{
+    width: 19px;
+}
+#submit p{
+    text-align: center;
+}
+input[type="submit"]{
+    width: 335px;
+    height: 32px;
+    border-width: 0px;
+    font-family: 'Gilroy-Bold', sans-serif;
+    color:#fff;
+    background-color: #F25019;
+    border-radius: 3.5px;
+}
+
+#register{
+    display: flex;
+    flex-direction: row;
+    gap:3px
+}
+#register a{
+    color:#AE4700;
+    font-family: 'Gilroy-Bold', sans-serif;
 }
