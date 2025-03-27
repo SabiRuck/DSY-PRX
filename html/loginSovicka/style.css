@@ -8,6 +8,11 @@ p{
     display: inline-block;
 }
 
+#inputs .error p{
+    color:red;
+}
+
+
 section{
     display: flex;
     align-items: center;
