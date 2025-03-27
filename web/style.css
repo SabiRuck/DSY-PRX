@@ -1,0 +1,459 @@
+body {
+    display: block;
+    text-align: center;
+    font-family: Roboto;
+    font-weight:normal;
+    font-size: 18px;
+    color: #fff;
+}
+ul{
+    padding-inline-start: 0px;
+    padding: 0px;
+    margin: 0px;
+
+}
+h1,h2, p , body, html, input{
+    margin: 0;
+    padding: 0;
+  }
+
+h1{
+    font-size: 44px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+h2{
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+button{
+    padding: 24px 80px;
+    text-transform: uppercase;
+    box-shadow: inset -4px -4px 10px rgba(0, 0, 0, 0.25);
+    color:#fff;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.bar a{
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 18px;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.bar li{
+    display: inline-block;
+}
+header{
+    display: flex;
+    justify-content: center;
+    background-color: #87509C;
+}
+
+#head{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;;
+}
+
+header ul{
+    text-align: right;
+    flex-wrap: nowrap;
+}
+
+header ul li a{
+    color: #fff;
+}
+
+
+header ul li a:hover{
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.container{
+    display: flex;
+    max-width: 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section{
+    display: flex;
+    justify-content: center;
+}
+.section ul{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#section1{
+    background-color: #87509C;
+    padding: 110px 0px;
+}
+#section1 button{
+    background-color: #EB7D4A;
+
+}
+#section1 button:hover{
+    background-color: #DA6935;
+}
+#section1 .container{
+    gap: 60px; 
+}
+#section1 h1{
+    text-transform: none;
+    margin: 0px 100px;
+
+}
+
+.title p:before{
+    content: "";
+    display: block;
+    height: 4px;
+    width: 80%;
+    background-color: orange;
+    margin-top: 20px auto 0;
+}
+.title{
+    max-width: 650px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   
+    gap: 40px;
+
+}
+#section2{
+    background-color: #17C2A4;
+    padding: 125px 0px;
+}
+#section2 .container{
+    gap:60px;
+}
+
+#section2 ul{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+}
+#section2 ul li{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    align-items: center;
+    width: 230px;
+
+}
+
+
+#section3{
+    color:#2F3855;
+    background-color: #E7F2F8;
+    padding: 125px 0px;
+
+}
+#section3 .container{
+    display: flex;
+    gap:70px;
+}
+#section3 ul{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0px 50px;
+    
+}
+#section3 ul li{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    align-items: center;
+    width: 230px;
+    
+}
+
+#section3 img{
+    height: 200px;
+    width: 200px;
+}
+
+.position{
+    color:#6AC1EC;
+}
+#section3 .link a {
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+}
+
+#section3 .link ul {
+    height: 30px;
+    display: flex;
+    gap:6px;
+    justify-content: center;
+    margin:0px;
+}
+
+#section3 .link li {
+    width: 30px;
+    gap:0px;
+}
+
+
+
+#insta{
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    background-image: url("images/insta.png");
+    transition: all 0.3s ease;
+}
+#insta:hover{
+    background-image: url("images/insta1.png");
+}
+
+#face{
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    background-image: url("images/facebook.png");
+    transition: all 0.3s ease;
+}
+#face:hover{
+    background-image: url("images/facebook1.png");
+}
+
+#twitter{
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    background-image: url("images/twitter.png");
+    transition: all 0.3s ease;
+}
+#twitter:hover{
+    background-image: url("images/twitter1.png");
+}
+
+#mail{
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    background-image: url("images/mail.png");
+    transition: all 0.3s ease;
+}
+#mail:hover{
+    background-image: url("images/mail1.png");
+}
+
+
+#section4{
+    color:#2F3855;
+    padding: 95px 0px;
+}
+#section4 img{
+    size: 165px 165px;
+}
+#section4 li{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    align-items: center;
+    width: 165px;
+}
+
+#section4 .container{
+    display: flex;
+    gap: 85px;
+
+}
+
+
+#section5{
+    background-color: #FFDC98;
+    color:#2F3855;
+    padding: 115px 0px;
+}
+#section5 .bar {
+    display: flex;
+    text-align: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+}
+
+#section5 .bar li a{
+    color:#2F3855;
+    background-color:rgba(0, 0, 0, 0.15);
+}
+#section5 .bar li a:hover{
+    background-color: #fff;
+}
+
+#section5 .container{
+    display: flex;
+    gap: 50px;
+
+}
+
+#section5 #pc ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+#section5 #pc li{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    align-items: center;
+    width: 100%;
+}
+
+#section5 #pc{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    font-weight: bold;
+
+}
+
+#section5 button{
+    background-color: #17C2A4;
+}
+#section5 button:hover{
+    background-color: #15A58C;
+}
+
+#section6{
+    background-color: #D74681;
+    padding: 135px 0px;
+}
+#section6 .container{
+    display: flex;
+    gap:60px;
+}
+#section6 ul{
+    display: flex;
+    gap:140px
+}
+#section6 li{
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: nowrap;
+    gap:70px;
+}
+#section6 .reviewInfo{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    gap:20px;
+    
+}
+
+#section6 #review{
+    display: flex;
+    flex-wrap: wrap;
+    gap:140px;
+    text-align: left;
+    padding-left: 25px;
+}
+#section6 #review h2{
+    text-transform: none;
+}
+#section6 .position{
+    color: #F5B792;
+}
+
+
+#section7{
+    background-color: #3C549A;
+    padding: 100px 0px;
+}
+#section7 .container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap:70px;
+    align-items: center
+
+}
+
+#section7 #inputs{
+    display: flex;
+    gap:40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#section7 #idkk{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 44px;
+}
+#section7 button{
+    background-color: #30BAE8;
+    width: 292px;
+    align-self: center;
+}
+#section7 button:hover{
+    background-color: #319FC3;
+}
+
+#section7 input{
+    width: 400px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.40);
+    border-width: 0px;
+    padding-left: 15px;
+}
+
+
+#section7 #bigText{
+    height: 185px;
+    width: 860px;
+    background-color: rgba(0, 0, 0, 0.40);
+    border-width: 0px;
+    padding: 15px 0px 0px 15px;
+}
+
+footer{
+    background-color: #344B8E;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+footer a{
+    text-decoration: none;
+    line-height: 18px;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    color:#fff;
+}
+footer a:hover{
+    color: #30BAE8;
+}
