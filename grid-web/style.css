@@ -1,0 +1,152 @@
+body{
+    background-color: #fff;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+#container{
+    width: 1172px;
+}
+html, body, ul, li, p, h1, h2{
+    padding: 0px;
+    margin: 0px;
+}
+
+header{
+    border-bottom: solid;
+    border-color: rgb(248, 248, 248);
+    border-width: 5px;
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+header img{
+    width: 40px;
+    height: 40px;
+    padding: 10px 0px;
+}
+
+header li a {
+    color: #2D3154;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding: 8px 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+}
+
+header li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 0;
+    height: 4px;
+    background-color: #34ACDB;
+    border-radius: 3px;
+}
+
+header li a:hover{
+    color: #34ACDB;
+}
+header li a:hover::after {
+    width: 100%;
+}
+header li:first-child a::after {
+    width: 100%;
+}
+header li:first-child a{
+    color: #34ACDB;
+}
+
+header ul:hover li:first-child a:not(:hover) {
+    color: #2D3154;
+}
+header ul:hover li:first-child a:not(:hover)::after {
+    width: 0%;
+}
+
+header ul{
+    display: flex;
+    list-style-type:none;
+    height: 100%;
+}
+
+h1{
+    font-size: 12px;
+    font-weight: 500;
+
+}
+h2{
+    font-size: 18px;
+    font-weight: 700;
+}
+p{
+    font-size: 10px;
+    color: #616070;
+}
+button{
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    background-color: #34ACDB;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 0px;
+    width: 100%;
+}
+.review{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.stars{
+    display: flex;
+    flex-direction: row;
+    gap:5px
+}
+.monitor{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #f3f3f3;
+    padding: 32px 16px 16px;
+    width: 165px;
+    gap:20px;
+}
+
+.pc{
+    width: 160px;
+}
+.name{
+    display: flex;
+    gap:5px;
+    flex-direction: column;
+}
+main img{
+    width: 13px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap:65px;
+    padding: 50px 100px;
+
+}
