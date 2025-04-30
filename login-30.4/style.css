@@ -1,0 +1,61 @@
+html, h1, label, body, div, input, form{
+    padding: 0px;
+    margin: 0px;
+    font-family: Roboto, sans-serif;
+}
+
+
+.inputs{
+    border: none;
+    width: 300px;
+    padding: 10px 0px 10px 25px;
+    background-color: #F6F6F6;
+    border-radius: 20px;
+}
+#data{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+label{
+    font-size: 12px;
+}
+h1{
+    font-size: 25px;
+}
+textarea{
+    resize: none;
+    font-family: Roboto, sans-serif;
+}
+input[type="submit"]{
+    border: none;
+    border-radius: 30px;
+    padding: 10px 40px;
+    background-color: #11857B;
+    color: #fff;
+    font-weight: 500;
+    align-self: center;
+    font-size: 13px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 70px 100px;
+    border-radius: 10px;
+    background-color: #fff;
+    gap: 40px;
+}
+body{
+    background-image: linear-gradient(to right, #089EA9, #08c4a9, #089EA9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
