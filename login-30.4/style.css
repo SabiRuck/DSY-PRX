@@ -6,7 +6,7 @@ html, h1, label, body, div, input, form{
 
 
 .inputs{
-    border: none;
+    border: 1px solid #F6F6F6;
     width: 300px;
     padding: 10px 0px 10px 25px;
     background-color: #F6F6F6;
@@ -57,5 +57,14 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
+
+}
+
+.good{
+    border-color: #F6F6F6;
+
+}
+.error{
+    border-color: red;
 
 }
