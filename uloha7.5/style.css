@@ -1,0 +1,59 @@
+body {
+    font-family: 'Open Sans';font-size: 22px;
+}
+html, body, h1, h2, div, form, label, input, section{
+    padding: 0px;
+    margin: 0px;
+}
+
+h1{
+    font-size: 32px;
+
+}
+h2{
+
+    font-size: 23px;
+}
+label{
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #CECECE;
+}
+.container{
+    width: 1152px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+#left{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+#links{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+#formular{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    border: none;
+    border-bottom: #999999 solid 1px;
+    padding: 10px 10px;
+}
+button{
+    border: none;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+a{
+    font-size: 10px;
+    color: #A6A6A6;
+}
