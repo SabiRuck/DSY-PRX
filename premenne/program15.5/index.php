@@ -1,8 +1,7 @@
 <?php 
 
 $actualPage =  basename(($_SERVER["REQUEST_URI"]));
-
-echo $actualPage;
+$actualPage = str_replace(".php", "", $actualPage);
 
 include("includes\header.php");
 

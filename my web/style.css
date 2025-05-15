@@ -1,0 +1,69 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+html{
+    font-size: 62.5%;
+    font-family: Roboto Slab;
+}
+
+/* brown #432E22
+brown2 #604535
+backgroundbrown #F1C18C
+logoColor1 #432E22
+logoColor2 #B78D5E */
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-self: center;
+    width: 100%;
+}
+header{
+    width: 100%;
+    background-color: #432E22;
+    border-bottom: 1px solid #F1C18C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.header{
+    width: 1152px;
+    display: flex;
+    justify-content: space-between;
+}
+.header ul{
+    display: flex;
+    flex-direction: row;
+    gap: 4.5rem;
+    list-style-type: none;
+
+}
+
+.header ul li{
+    display: flex;
+    justify-content: center;
+
+}
+.header ul li a{
+    display: block;
+    padding: 1.5rem 1rem;
+    font-size: 1.6rem;
+    align-content: center;
+    color:#F1C18C;
+}
+.header ul li a:hover{
+    font-weight: bold;
+}
+#hIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.9rem;
+}
+
+main{
+    width: 1152px;
+}
