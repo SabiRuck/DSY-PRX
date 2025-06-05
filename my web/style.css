@@ -67,3 +67,15 @@ header{
 main{
     width: 1152px;
 }
+
+
+#heroImg
+{
+    display: flex;
+    flex-direction: row;
+}
+
+#heroButtons
+{
+
+}
