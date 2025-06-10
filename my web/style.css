@@ -20,6 +20,61 @@ body{
     justify-self: center;
     width: 100%;
 }
+h1{
+    font-size: 3.5rem;
+    font-family: "Inria Serif";
+    font-weight: bold;
+    font-style: italic;
+    color: #432E22;
+}
+h2{
+    font-size: 2.5rem;
+    font-family: "Inria Serif";
+    font-style: italic;
+    color: #432E22;
+    font-weight: 300;
+}
+h3{
+    font-size: 5.5rem;
+    font-family: "Inria Serif";
+    font-weight: bold;
+    font-style: italic;
+}
+h4{
+    font-family: "Inria Serif";
+    font-style: italic;
+    color: #432E22;
+    font-style: normal;
+    font-size: 3.2rem;
+    text-align: center;
+}
+.buttonBrown{
+    font-family: Roboto Slab;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: #F1C18C;
+    background: #604535;
+    text-align: center;
+    padding: 1rem 2.5rem;
+    border: #432E22 solid 0.3rem;
+    border-radius: 30px;
+
+}
+.buttonBrown:hover{
+    background-color: #F1C18C;
+    color: #432E22;
+}
+.buttonWhite{
+    font-family: Roboto Slab;
+    font-weight: bold;
+    font-size: 2.4rem;
+    background-color: #FFF7EF;
+    text-align: center;
+    border: #432E22 solid 0.3rem;
+    border-radius: 30px;
+    color:#604535;
+    padding: 0.5rem 2rem;
+}
 header{
     width: 100%;
     background-color: #432E22;
@@ -65,7 +120,7 @@ header{
 }
 
 main{
-    width: 1152px;
+    width: 1172px;
 }
 
 
@@ -73,9 +128,102 @@ main{
 {
     display: flex;
     flex-direction: row;
+    gap: 7.6rem;
 }
-
+#heroImg h1{
+    align-self: center;
+    text-align: center;
+}
 #heroButtons
 {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
 
+}
+#heroBottom{
+    width: 55rem;
+    justify-self: flex-end;
+    margin-top: -3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+#heroBottom h2{
+    padding: 1rem 0rem 0rem 4rem;
+}
+#hero{
+    padding-top: 5rem;
+}
+
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    gap: 13rem;
+}
+#cookies{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 17rem;
+    column-gap: 12.5rem;
+    align-items: center;
+}
+
+.cookie{
+    position: relative;
+    background-color: #FFF7EF;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 19rem 3rem 3rem 3rem;
+    width: 30rem;
+    border-radius: 30px;
+    gap: 1.5rem;
+    box-sizing: border-box
+}
+
+.cookie p{
+    color: #604535;
+    font-family: "Inria Serif";
+    font-size: 2rem;
+
+}
+.cookie button{
+    width: 100%;
+}
+.from{
+    font-weight: bold;
+    color: #432E22;
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+}
+.ignoreCookie{
+    position: absolute;
+    bottom: 230px;
+}
+
+
+#mix{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    padding-left: 65rem;
+    margin: 5rem 0rem;
+}
+
+#mixText{
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+    align-items: center;
+}
+.ignoreMix{
+    position: absolute;
+    right: 58rem;
 }
