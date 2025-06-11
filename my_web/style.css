@@ -100,20 +100,26 @@ section, header, footer{
     border-radius: 30px;
     color:#604535;
     padding: 0.5rem 2rem;
+    width: 100%;
+    text-decoration: none;
 }
 header{
-    width: 100%;
-    background-color: #432E22;
-    border-bottom: 1px solid #F1C18C;
+    width: 1440px;
     display: flex;
     align-items: center;
     justify-content: center;
+        background-color: #432E22;
+
 
 }
 .header{
     width: 1152px;
     display: flex;
     justify-content: space-between;
+    background-color: #432E22;
+    border-bottom: 1px solid #F1C18C;
+
+
 }
 .header ul{
     display: flex;
@@ -318,7 +324,7 @@ input[type="email"]{
 
 
 }
-button[type="submit"]{
+#join button[type="submit"]{
     border: #432E22 solid 2.5px;
     border-radius: 30px;
     background-color: #604535;
@@ -380,4 +386,59 @@ button[type="submit"]{
     font-size: 1.6rem;
     color: #F1C18C;
     text-align: center;
+}
+
+
+.cookieMain{
+    display: flex;
+    flex-direction: row;
+
+
+}
+#cookieMainS{
+     background-image: url("images/vector6.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 682px;
+}
+
+
+#cookiePage{
+    display: flex;
+    flex-direction: column;
+    gap: 2.7rem;
+}
+
+#cookiePage button{
+    padding: 1rem 2rem;
+    background-color: rgba(255, 247, 239, 0.2); 
+    border-radius: 2.4rem;
+    border: #432E22 solid 0.3rem;
+}
+#cookiePage button:hover{
+
+}
+
+
+.pieces-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.piece-option {
+    border: 2px solid #4A3D36;
+    padding: 0.6rem 1.5rem;
+    border-radius: 999px;
+    background-color: transparent;
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    color: #4A3D36;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.piece-option.selected {
+    background-color: rgba(255, 240, 220, 0.8); /* 20% transparent */
 }

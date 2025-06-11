@@ -42,7 +42,7 @@ include("data/cookies.php");
                         <p class="from">From:</p>
                         <p><?php echo($dictCookie["ChocolateChip"]["price7"]) ?>€</p>
                     </div>
-                    <button class="buttonWhite">Buy</button>
+                    <a href="product.php?product=ChocolateChip" class="buttonWhite">Buy</a>
                 </div>
 
                 <div class="cookie">
@@ -52,7 +52,7 @@ include("data/cookies.php");
                         <p class="from">From:</p>
                         <p><?php echo($dictCookie["Brownie"]["price7"]) ?>€</p>
                     </div>
-                    <a href="product.php?product=ChocolateChip" class="buttonWhite">Buy</a>
+                    <a href="product.php?product=Brownie" class="buttonWhite">Buy</a>
                 </div>
 
                 <div class="cookie">
@@ -62,7 +62,7 @@ include("data/cookies.php");
                         <p class="from">From:</p>
                         <p><?php echo($dictCookie["BirthdayCake"]["price7"]) ?>€</p>
                     </div>
-                    <button class="buttonWhite">Buy</button>
+                    <a href="product.php?product=BirthdayCake" class="buttonWhite">Buy</a>
                 </div>
 
                 <div class="cookie">
@@ -72,7 +72,7 @@ include("data/cookies.php");
                         <p class="from">From:</p>
                         <p><?php echo($dictCookie["Raspberry"]["price7"]) ?>€</p>
                     </div>
-                    <button class="buttonWhite">Buy</button>
+                    <a href="product.php?product=Raspberry" class="buttonWhite">Buy</a>
                 </div>
 
                 <div class="cookie">
@@ -82,7 +82,7 @@ include("data/cookies.php");
                         <p class="from">From:</p>
                         <p><?php echo($dictCookie["CaramelLotus"]["price7"]) ?>€</p>
                     </div>
-                    <button class="buttonWhite">Buy</button>
+                    <a href="product.php?product=CaramelLotus" class="buttonWhite">Buy</a>
                 </div>
 
                 <div class="cookie">
@@ -92,7 +92,7 @@ include("data/cookies.php");
                         <p class="from">From:</p>
                         <p><?php echo($dictCookie["PeanutButter"]["price7"]) ?>€</p>
                     </div>
-                    <button class="buttonWhite">Buy</button>
+                    <a href="product.php?product=PeanutButter" class="buttonWhite">Buy</a>
                 </div>
             </div>
             </div>
