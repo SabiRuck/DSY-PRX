@@ -48,6 +48,32 @@ h4{
     font-size: 3.2rem;
     text-align: center;
 }
+h5{
+    font-family: Roboto Slab;
+    font-size: 2.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #F1C18C;
+    padding: 0.5rem 1rem;
+
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section, header, footer{
+    width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footerC, .container{
+
+    box-sizing:border-box;
+    width: 1440px;
+    padding: 0px 134px ;
+}
 .buttonBrown{
     font-family: Roboto Slab;
     font-weight: bold;
@@ -153,13 +179,33 @@ main{
     padding: 1rem 0rem 0rem 4rem;
 }
 #hero{
-    padding-top: 5rem;
+    padding-top: 2rem;
+}
+#heroS{
+    background-image: url("images/vector1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 625px;
 }
 
+#avatar{
+    height: 285px;
+}
 
+#menuS{
+    background-image: url("images/vector2.png");
+      background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+    height: 1568px;
+    display: flex;
+    padding-top: 110px;
+}
 #menu{
     display: flex;
     flex-direction: column;
+justify-content: center;
     gap: 13rem;
 }
 #cookies{
@@ -204,7 +250,11 @@ main{
 }
 .ignoreCookie{
     position: absolute;
-    bottom: 230px;
+    bottom: 23rem;
+}
+#brownie{
+    bottom: 19rem;
+    
 }
 
 
@@ -225,5 +275,109 @@ main{
 }
 .ignoreMix{
     position: absolute;
-    right: 58rem;
+    right: 76rem;
+    bottom: 0rem;
+}
+
+#join {
+  background-image: url("images/vector3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 320px;
+  text-align: center;
+  padding-top: 70px;
+}
+#joinPost{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+}
+#joinText{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+#joinSub{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+#join p{
+    font-family: "Inria Serif";
+    font-size: 2rem;
+}
+
+input[type="email"]{
+    padding: 1rem 0rem 1rem 1rem;
+    border-radius: 30px;
+    border: none;
+    width: 25rem;
+    background-color: #FFF7EF;
+
+
+}
+button[type="submit"]{
+    border: #432E22 solid 2.5px;
+    border-radius: 30px;
+    background-color: #604535;
+    color: #FFF7EF;
+    padding: 1rem 2.5rem;
+    font-family: Roboto Slab;
+    font-size: 1.6rem;
+}
+
+
+.footerC a:not(.footerMedia a), mail{
+    font-family: Roboto Slab;
+    font-size: 1.6rem;
+    color:#F1C18C;
+    padding: 0.5rem 1rem;
+
+    
+}
+
+.footerC{
+    display: flex;
+    flex-direction: column;
+    gap: 2.7rem;
+    background-color: #432E22;
+
+}
+.footerContact a{
+    color: #F1C18C;
+
+}
+
+.footerAll{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.footerMedia{
+    display: flex;
+    flex-direction: row;
+    font-size: 2.5rem;
+    gap: 2.5rem
+}
+.footerAll > div:not(.footerMedia){
+    display: flex;
+    flex-direction: column;
+}
+.footerInfo{
+    gap: 1rem;
+}
+
+.footerContact{
+    gap: 1.5rem;
+
+}
+
+.footerRights{
+    font-family: Roboto Slab;
+    font-size: 1.6rem;
+    color: #F1C18C;
+    text-align: center;
 }
