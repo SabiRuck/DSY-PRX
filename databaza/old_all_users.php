@@ -25,8 +25,6 @@ $all_users = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
     <title>All users</title>
 </head>
 <body>
@@ -42,28 +40,12 @@ $all_users = mysqli_fetch_all($result, MYSQLI_ASSOC);
         <?php 
         //v tomto podtym som zmatena sry daj to do chatu
         else:?>
-            <table>
-            <tr>
-                <th>Meno</th>
-                <th>Priezvisko</th>
-                <th>Vek</th>
-                <th>Operacia</th>
-            </tr>
+            <ul>
             <?php foreach($all_users as $oneUser): ?>
-                <tr>
-                    <td><?php echo $oneUser["first_name"]?></td>
-                    <td><?php echo $oneUser["last_name"];?></td>
-                    <td><?php echo $oneUser["age"];?></td>
-                    <td>
-                    <a href="one_user.php?id=<?php echo $oneUser["id"]?>">info</a>
-                    <a href="one_user.php?id=<?php echo $oneUser["id"]?>">edit</a>
-                    <a href="one_user.php?id=<?php echo $oneUser["id"]?>">delete</a>
-
-                    </td>
-
-                </tr>
+                <li><?php echo $oneUser["first_name"]." ".$oneUser["last_name"];?></li>
+                <a href="one_user.php?id=<?php echo $oneUser["id"]?>">Mode information...</a><br><br>
             <?php endforeach;?>
-            </table>
+            </ul>
             <?php endif;?>
 
 
