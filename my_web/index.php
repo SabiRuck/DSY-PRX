@@ -2,6 +2,28 @@
 
 include("data/cookies.php");
 
+$peopleTexts = [
+    [
+        "name" => "",
+        "text" => "Every batch is a little different, and I think that’s the beauty of handmade cookies. No shortcuts—just honest, real baking.",
+    ],
+    [
+        "name" => "",
+        "text" => "I’m all about tradition. There’s something special about recreating recipes that have been loved for generations.",
+    ],
+    [
+        "name" => "",
+        "text" => "My favorite part of baking? Seeing someone take a bite and smile. That’s when I know all the hard work was worth it.",
+    ],
+    [
+        "name" => "",
+        "text" => "I love experimenting with flavors—every batch is a chance to try something new. But no matter the recipe, quality ingredients always come first.",
+    ],
+    [
+        "name" => "",
+        "text" => "For me, it’s all about balance. A cookie should be soft in the center, with just the right amount of crunch on the edges. That’s my baking philosophy.",
+    ]
+]
 ?>
 
 
@@ -28,6 +50,45 @@ include("data/cookies.php");
             </div>
         </section>
         <section id="avatar">
+            <div class="slideshow-container">
+                <?php for ($i=0; $i < 6; $i++):?>
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <img src="images/people<?php echo $i ?>">
+                    <p><?php echo $peopleTexts[$i]["text"]?><p>
+                    <p>-<?php echo $peopleTexts[$i]["name"]?><p>
+
+                </div>
+
+                <?php endfor;?>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="img2.jpg" style="width:100%">
+                    <div class="text">Caption Two</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="img3.jpg" style="width:100%">
+                    <div class="text">Caption Three</div>
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+        </div>
 
         </section>
             
@@ -35,65 +96,17 @@ include("data/cookies.php");
             <div class="container" id="menu">
             <h3>BEST SELLERS</h3>
             <div id="cookies">
+            <?php for ($i=1; $i < 7; $i++): ?>
                 <div class="cookie">
-                    <img class="ignoreCookie" src="images/cookie<?php echo (string) $dictCookie["ChocolateChip"]["id"]; ?>.png">
-                    <h4><?php echo($dictCookie["ChocolateChip"]["name"]) ?></h4>
+                    <img class="ignoreCookie" src="images/cookie<?php echo (string) $dictCookie[$i]["id"]; ?>.png">
+                    <h4><?php echo($dictCookie[$i]["name"]) ?></h4>
                     <div class="price">
                         <p class="from">From:</p>
-                        <p><?php echo($dictCookie["ChocolateChip"]["price7"]) ?>€</p>
+                        <p><?php echo($dictCookie[$i]["price7"]) ?>€</p>
                     </div>
-                    <a href="product.php?product=ChocolateChip" class="buttonWhite">Buy</a>
+                    <a href="product.php?product=<?php echo $i?>" class="buttonWhite">Buy</a>
                 </div>
-
-                <div class="cookie">
-                    <img class="ignoreCookie" id="brownie" src="images/cookie<?php echo (string) $dictCookie["Brownie"]["id"]; ?>.png">
-                    <h4><?php echo($dictCookie["Brownie"]["name"]) ?></h4>
-                    <div class="price">
-                        <p class="from">From:</p>
-                        <p><?php echo($dictCookie["Brownie"]["price7"]) ?>€</p>
-                    </div>
-                    <a href="product.php?product=Brownie" class="buttonWhite">Buy</a>
-                </div>
-
-                <div class="cookie">
-                    <img class="ignoreCookie" src="images/cookie<?php echo (string) $dictCookie["BirthdayCake"]["id"]; ?>.png">
-                    <h4><?php echo($dictCookie["BirthdayCake"]["name"]) ?></h4>
-                    <div class="price">
-                        <p class="from">From:</p>
-                        <p><?php echo($dictCookie["BirthdayCake"]["price7"]) ?>€</p>
-                    </div>
-                    <a href="product.php?product=BirthdayCake" class="buttonWhite">Buy</a>
-                </div>
-
-                <div class="cookie">
-                    <img class="ignoreCookie" src="images/cookie<?php echo (string) $dictCookie["Raspberry"]["id"]; ?>.png">
-                    <h4><?php echo($dictCookie["Raspberry"]["name"]) ?></h4>
-                    <div class="price">
-                        <p class="from">From:</p>
-                        <p><?php echo($dictCookie["Raspberry"]["price7"]) ?>€</p>
-                    </div>
-                    <a href="product.php?product=Raspberry" class="buttonWhite">Buy</a>
-                </div>
-
-                <div class="cookie">
-                    <img class="ignoreCookie" src="images/cookie<?php echo (string) $dictCookie["CaramelLotus"]["id"]; ?>.png">
-                    <h4><?php echo($dictCookie["CaramelLotus"]["name"]) ?></h4>
-                    <div class="price">
-                        <p class="from">From:</p>
-                        <p><?php echo($dictCookie["CaramelLotus"]["price7"]) ?>€</p>
-                    </div>
-                    <a href="product.php?product=CaramelLotus" class="buttonWhite">Buy</a>
-                </div>
-
-                <div class="cookie">
-                    <img class="ignoreCookie" src="images/cookie<?php echo (string) $dictCookie["PeanutButter"]["id"]; ?>.png">
-                    <h4><?php echo($dictCookie["PeanutButter"]["name"]) ?></h4>
-                    <div class="price">
-                        <p class="from">From:</p>
-                        <p><?php echo($dictCookie["PeanutButter"]["price7"]) ?>€</p>
-                    </div>
-                    <a href="product.php?product=PeanutButter" class="buttonWhite">Buy</a>
-                </div>
+                <?php endfor;?>
             </div>
             </div>
         </section>
@@ -112,16 +125,16 @@ include("data/cookies.php");
 
         <section id="joinS">
             <div class="container" id="join">
-            <form action="#" method="post" id="joinPost">
-                <div id="joinText">
-                    <h3><em>Join the Cookie Club <span style="font-style: normal;">🍪</span></em></h3>
-                    <p><strong>Get 10% off your first order,</strong> restock reminders, special offers</p>
-                </div>
-                <div id="joinSub">
-                    <input type="email" placeholder="email@gmail.com">
-                    <button type="submit">Sign-Up</button>
-                </div>
-            </form>
+                <form action="#" method="post" id="joinPost">
+                    <div id="joinText">
+                        <h3><em>Join the Cookie Club <span style="font-style: normal;">🍪</span></em></h3>
+                        <p><strong>Get 10% off your first order,</strong> restock reminders, special offers</p>
+                    </div>
+                    <div id="joinSub">
+                        <input type="email" placeholder="email@gmail.com">
+                        <button type="submit">Sign-Up</button>
+                    </div>
+                </form>
             </div>
         </section>
     </main>

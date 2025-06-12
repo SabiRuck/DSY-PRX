@@ -1,3 +1,7 @@
+:root {
+    --imgHeight: 26rem;
+}
+
 *{
     padding: 0px;
     margin: 0px;
@@ -5,6 +9,8 @@
 html{
     font-size: 62.5%;
     font-family: Roboto Slab;
+    scroll-behavior: smooth;
+
 }
 
 /* brown #432E22
@@ -53,8 +59,6 @@ h5{
     font-size: 2.5rem;
     font-weight: normal;
     text-transform: uppercase;
-    color: #F1C18C;
-    padding: 0.5rem 1rem;
 
 }
 main{
@@ -89,6 +93,7 @@ section, header, footer{
 .buttonBrown:hover{
     background-color: #F1C18C;
     color: #432E22;
+    transition: all 0.3s ease;
 }
 .buttonWhite{
     font-family: Roboto Slab;
@@ -103,6 +108,14 @@ section, header, footer{
     width: 100%;
     text-decoration: none;
 }
+.buttonWhite:hover{
+    border-color: #FFF7EF;
+    color: #FFF7EF;
+    background-color: #432E22;
+    transition: all 0.3s ease;
+
+
+}
 header{
     width: 1440px;
     display: flex;
@@ -116,10 +129,6 @@ header{
     width: 1152px;
     display: flex;
     justify-content: space-between;
-    background-color: #432E22;
-    border-bottom: 1px solid #F1C18C;
-
-
 }
 .header ul{
     display: flex;
@@ -143,6 +152,7 @@ header{
 }
 .header ul li a:hover{
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 #hIcon{
     display: flex;
@@ -235,7 +245,14 @@ justify-content: center;
     gap: 1.5rem;
     box-sizing: border-box
 }
+.cookie img{
+    height: var(--imgHeight);
+    transition: all 0.3s ease;
 
+}
+.cookie:hover{
+    --imgHeight: 27rem
+}
 .cookie p{
     color: #604535;
     font-family: "Inria Serif";
@@ -321,11 +338,10 @@ input[type="email"]{
     border: none;
     width: 25rem;
     background-color: #FFF7EF;
-
-
 }
+
 #join button[type="submit"]{
-    border: #432E22 solid 2.5px;
+    border: #432E22 solid 3px;
     border-radius: 30px;
     background-color: #604535;
     color: #FFF7EF;
@@ -333,15 +349,26 @@ input[type="email"]{
     font-family: Roboto Slab;
     font-size: 1.6rem;
 }
+#join button[type="submit"]:hover{
+    background-color: #F1C18C;
+    color: #432E22;
+    transition: all 0.3s ease;
+}
 
+.footerC a{
+    text-decoration: none;
 
+}
+
+.footerC a:hover{
+    color: rgba(96, 69, 53, 1);
+    transition: all 0.3s ease;
+}
 .footerC a:not(.footerMedia a), mail{
     font-family: Roboto Slab;
     font-size: 1.6rem;
     color:#F1C18C;
     padding: 0.5rem 1rem;
-
-    
 }
 
 .footerC{
@@ -361,6 +388,10 @@ input[type="email"]{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+.footerAll h5{
+    color: #F1C18C;
+    padding: 0.5rem 1rem;
 }
 .footerMedia{
     display: flex;
@@ -392,8 +423,15 @@ input[type="email"]{
 .cookieMain{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    padding: 5rem 0rem 0rem 3.5rem;
+    box-sizing: border-box;
+    width: 1172px;
+    gap: 10rem;
 
-
+}
+.cookieMain img{
+    height: 45rem;
 }
 #cookieMainS{
      background-image: url("images/vector6.png");
@@ -401,6 +439,7 @@ input[type="email"]{
     background-repeat: no-repeat;
     background-position: center;
     height: 682px;
+    width: 1440px;
 }
 
 
@@ -408,37 +447,85 @@ input[type="email"]{
     display: flex;
     flex-direction: column;
     gap: 2.7rem;
+    justify-content: center;
+}
+
+#cookiePage h3{
+    text-align: center;
+    align-self: flex-start;
+    padding-right: 5rem;
 }
 
 #cookiePage button{
     padding: 1rem 2rem;
-    background-color: rgba(255, 247, 239, 0.2); 
     border-radius: 2.4rem;
-    border: #432E22 solid 0.3rem;
+    border: #432E22 solid 0.2rem;
 }
 #cookiePage button:hover{
-
+    transition: all 0.3s ease;
 }
 
+#card{
+    background-color: rgba(255, 247, 239, 0.75);
+    width: 24rem;
+    margin: 3rem
+    
+}
+#cookiePic{
+    padding: 2.5rem;
+    border-radius: 3.2rem;
+    background-color: rgba(255, 247, 239, 0.75);
 
+}
 .pieces-form {
     display: flex;
     gap: 1rem;
     margin-bottom: 1.5rem;
+    padding-left: 3rem;
 }
 
 .piece-option {
-    border: 2px solid #4A3D36;
-    padding: 0.6rem 1.5rem;
-    border-radius: 999px;
-    background-color: transparent;
-    font-family: 'Georgia', serif;
-    font-size: 1.1rem;
-    color: #4A3D36;
+    font-family: "Inria Serif";
+    font-size: 1.6rem;    
     cursor: pointer;
     transition: 0.3s;
+    background-color: transparent;
 }
 
 .piece-option.selected {
-    background-color: rgba(255, 240, 220, 0.8); /* 20% transparent */
+    background-color:  rgba(255, 247, 239, 0.75);
+    border-width: 0.3rem;
+}
+
+.price-form{
+    padding-left: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#cookieInfoS{
+    width: 1440px;
+    background-color: #FFF7EF;
+}
+.cookieInfo{
+    width: 1172px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    font-family: Roboto Slab;
+    font-size: 1.6rem;
+    margin: 4rem 0rem;
+
+}
+#contains{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+#contains ul{
+    list-style-type: none;
+
 }

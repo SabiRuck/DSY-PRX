@@ -1,11 +1,11 @@
         <div class="footerC">
             <div class="footerAll">
-                <div><img src="images/logo.png"></div>
+                <div><a href="#top-page"><img src="images/logo.png"></a></div>
                 <div class="footerInfo">
                     <h5>info</h5>
-                    <a href="">Delivery</a>
-                    <a href="">FAQs</a>
-                    <a href="">About us</a>
+                    <a href="#">Delivery</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">About us</a>
                 </div>
                 <div class="footerContact">
                     <h5>contact us</h5>
@@ -22,8 +22,8 @@
                     </div>
                 </div>
                 <div class="footerIdk">
-                    <a href="">Privacy Policy</a>
-                    <a href="">Terms Of Use</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms Of Use</a>
                 </div>
             </div>
             <div class="footerRights">

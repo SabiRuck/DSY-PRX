@@ -18,16 +18,15 @@ if (isset($_GET['pieces'])) {
 
 <main>
     <section id="cookieMainS">
-        <div class="container cookieMain">
-            <img src="images/group<?php echo $product["id"]; ?>.png" alt="Image of <?php echo $product["name"]; ?>">
+        <div class="cookieMain">
+            <div id="cookiePic"><img src="images/group<?php echo $product["id"]; ?>.png" alt="Image of <?php echo $product["name"]; ?>"></div>
 
             <form method="get" id="cookiePage">
                 <h3><?php echo $product["name"]; ?></h3>
 
-                <!-- Keep product in URL -->
                 <input type="hidden" name="product" value="<?php echo htmlspecialchars($productKey); ?>">
 
-                <div class="ammount pieces-form">
+                <div class="pieces-form">
                     <button 
                         type="submit" 
                         name="pieces" 
@@ -47,38 +46,40 @@ if (isset($_GET['pieces'])) {
                     </button>
                 </div>
 
-                <div class="price">
+                <div class="price-form">
                     <h4><?php echo ($pieces == 12) 
                         ? $product["price12"] 
                         : $product["price7"]; ?> €</h4>
                 </div>
 
-                <button type="submit" name="add" value="1"><h4>ADD TO CART</h4></button> 
+                <button type="submit" id="card" name="add" value="1"><h4>ADD TO CART</h4></button> 
             </form>
         </div>
     </section>
 
-    <section>
+    <section id="cookieInfoS">
         <div class="cookieInfo">
             <div>
                 <h5>Description</h5>
                 <p><?php echo $product["description"]; ?></p>
             </div>
 
-            <div>
+
+            <div id="contains">
                 <p>Contains:</p>
                 <ul>
                     <?php
                     foreach ($product["allergens"] as $allergen) {
-                        echo "<li>" . htmlspecialchars($allergen) . "</li>";
+                        echo "<li>-" . htmlspecialchars($allergen) . "</li>";
                     }
                     ?>
                 </ul>
-                <p>
-                    Our desserts are made onsite and may come into contact with different allergens during production.
-                    Please be advised that any of our products may contain allergens including peanuts, tree nuts, milk, eggs, wheat, soy, and sesame.
-                </p>
             </div>
+
+            <p>
+                Our desserts are made onsite and may come into contact with different allergens during production.
+                Please be advised that any of our products may contain allergens including peanuts, tree nuts, milk, eggs, wheat, soy, and sesame.
+            </p>
         </div>
     </section>
 </main>
