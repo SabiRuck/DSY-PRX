@@ -3,6 +3,7 @@
 include("data/cookies.php");
 
 $peopleTexts = [
+
     [
         "name" => "",
         "text" => "Every batch is a little different, and I think that’s the beauty of handmade cookies. No shortcuts—just honest, real baking.",
@@ -49,48 +50,34 @@ $peopleTexts = [
             </div>
             </div>
         </section>
-        <section id="avatar">
-            <div class="slideshow-container">
-                <?php for ($i=0; $i < 6; $i++):?>
 
-                <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade">
-                    <img src="images/person<?php echo $i ?>">
-                    <p><?php echo $peopleTexts[$i]["text"]?><p>
-                    <p>-<?php echo $peopleTexts[$i]["name"]?><p>
 
+       <section id="avatar">
+        <div class="slideshowContainer">
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+            <div class="slidesWrapper">
+            <?php for ($i = 0; $i < 5; $i++): ?>
+            <div class="mySlides fade">
+                <div class="avatarContenr">
+                <img src="images/person<?php echo $i ?>.png" class="avatarImg">
+                <blockquote>
+                    <p>"<?php echo $peopleTexts[$i]["text"] ?>"</p>
+                    <p>-<?php echo $peopleTexts[$i]["name"] ?></p>
+                </blockquote>
                 </div>
+            </div>
+            <?php endfor; ?>
+            </div>
 
-                <?php endfor;?>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">2 / 3</div>
-                    <img src="img2.jpg" style="width:100%">
-                    <div class="text">Caption Two</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">3 / 3</div>
-                    <img src="img3.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <br>
-
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
 
         </div>
-
         </section>
+
+
+
             
         <section id="menuS">
             <div class="container" id="menu">

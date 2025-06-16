@@ -18,6 +18,7 @@ brown2 #604535
 backgroundbrown #F1C18C
 logoColor1 #432E22
 logoColor2 #B78D5E */
+
 body{
     display: flex;
     align-items: center;
@@ -529,3 +530,94 @@ input[type="email"]{
     list-style-type: none;
 
 }
+
+
+
+
+.slideshowContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0; /* no side padding — arrows sit at edges */
+  text-align: center;
+  overflow: hidden;
+}
+
+.slidesWrapper {
+  flex: 1;
+  position: relative;
+  padding: 0 100px;
+  width: 95.5rem;
+}
+
+.avatarContenr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.avatarImg {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+#avatar p{
+  font-size: 2rem;
+  font-family: "Inria Serif";
+}
+
+
+.prev, .next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+  font-size: 40px;
+  color: #aaa;
+  pointer-events: auto;
+}
+
+.prev {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+}
+
+.next {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+}
+
+.prev:hover, .next:hover {
+  color: #000;
+}
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.mySlides {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from { opacity: .4; }
+  to { opacity: 1; }
+}
+
+
