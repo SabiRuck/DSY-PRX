@@ -55,7 +55,7 @@ $peopleTexts = [
 
                 <!-- Full-width images with number and caption text -->
                 <div class="mySlides fade">
-                    <img src="images/people<?php echo $i ?>">
+                    <img src="images/person<?php echo $i ?>">
                     <p><?php echo $peopleTexts[$i]["text"]?><p>
                     <p>-<?php echo $peopleTexts[$i]["name"]?><p>
 
