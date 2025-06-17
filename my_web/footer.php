@@ -1,6 +1,6 @@
         <div class="footerC">
             <div class="footerAll">
-                <div><a href="#top-page"><img src="images/logo.png"></a></div>
+                <div><a href="#top-page"><img src="images/logo.png" class="logo"></a></div>
                 <div class="footerInfo">
                     <h5>info</h5>
                     <a href="#">Delivery</a>
@@ -31,6 +31,6 @@
             </div>
         </div>
     </footer>
-    
+
 </body>
 </html>

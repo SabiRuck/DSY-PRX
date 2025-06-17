@@ -3,17 +3,22 @@
     html{
     font-size: 62.5%;
     }
-  
-    :root {
-    --imgHeight: 26rem;
+
+
+
+    .nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 4.5rem;
+    list-style-type: none;
     }
 
-    #heroImg h1{
-      order: 0;
-        align-self: center;
-
-
+    .menu-button {
+        display: none;
     }
+
+    
+
 
     #img1{
     order: 1;
@@ -23,13 +28,13 @@
     }
 
     section, header, footer{
-    width: 1440px;
+    width: 144rem;
     }
     .footerC{
-    width: 1440px;
+    width: 144rem;
     }
     .container{
-    width: 1172px;
+    width: 117.2rem;
     }
 
 
@@ -40,7 +45,7 @@
     #heroS{
         background-image: url("images/vector1.png");
         background-size: 100% 100%;
-        height: 625px;
+        height: 62.5rem;
     }
     #hero{
     padding-top: 2rem;
@@ -75,14 +80,6 @@
         gap: 1.5rem;
     }
 
-    .cookie img{
-    height: var(--imgHeight);
-    transition: all 0.3s ease;
-
-    }
-    .cookie:hover{
-        --imgHeight: 27rem
-    }
 
     #cookies{
     display: grid;
@@ -101,12 +98,6 @@
         bottom: 19rem;
         
     }
-
-    .ignoreMix{
-        position: absolute;
-        right: 76rem;
-        bottom: 0rem;
-    }
     #mix{
 
         padding-left: 65rem;
@@ -116,7 +107,7 @@
 
 
     #menuS{
-        height: 1568px;
+        height: 156.8rem;
         padding-top: 110px;
         background-size: 100% 100%;
 
@@ -134,7 +125,7 @@
 
     }
     #join {
-    height: 320px;
+    height: 32rem;
     text-align: center;
     padding-top: 7rem;
     }
@@ -144,41 +135,108 @@
 
 
 
-
-
-
-@media only screen and (max-width: 959px) {
-
+@media only screen and (min-width: 960px) and (max-width: 1140px){
     html{
-    font-size: 38.4%;
+    font-size: 41.66%;
+
     }
 
-    :root {
-    --imgHeight: 26rem;
+}
+
+@media only screen and (min-width: 1140px) and (max-width: 1439px){
+    html{
+    font-size: 49.48%;
+
+    }
+
+}
+
+
+/* large web*/
+@media only screen and (min-width: 1440px) {
+
+    html{
+    font-size: 62.5%;
+    }
+
+}
+
+@media only screen and (min-width: 360px) and (max-width:720px) {
+    html{
+    font-size: 19.2%;
+    }
+
+}
+
+
+@media only screen and (max-width:960px) {
+
+    
+
+   .nav-list {
+        overflow: hidden;
+        color: #000;
+        max-height: 0;
+        transition: max-height 0.5s ease;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 75px;
+        background-color: #432E22;
+        padding: 0 1rem;
+        gap: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        list-style-type: none;
+    }
+
+    .nav-list.show {
+        max-height: 300px; 
+        padding: 1rem;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    header {
+    position: relative;
+    z-index: 1000;
+}
+
+
+}
+
+@media only screen and (min-width: 720px) and (max-width:960px) {
+
+    
+    html{
+    font-size: 38.4%;
+
     }
 
     .footerC{
     width: 720px;
     }
-    #footerVector{
-        object-fit: fill;
-        width: 100%;
 
-    }
-
-     #img1{
+    #img1{
         order: 0;
     }
-    #img1 img{
-        width: 310px;
 
+
+    #img2{
+        order: 2;
+        display: flex;
+        align-items: center;
+        padding-bottom: 5rem;
     }
+
     #heroImg h1 {
         order: 1;
         margin: 0px -15px;
         width: 165px;
         padding: 40px 10px 20px 10px;
     }
+
     #heroS{
         background-image: url("images/vector7.png");
         background-size: 100% 100%;
@@ -190,15 +248,6 @@
         padding: 2rem 0px 0px 2rem;
     }
 
-    #img2{
-        order: 2;
-        display: flex;
-        align-items: center;
-        padding-bottom: 5rem;
-    }
-    #img2 img{
-        width: 205px;
-    }
     #heroImg{
         height: 380px;
     }
@@ -227,6 +276,7 @@
     .slidesWrapper {
         padding: 0 6.23rem;
         width: 70rem;
+        background-color: #FFF7EF;
     }
     .prev, .next {
         width: 6.23rem;
@@ -239,14 +289,6 @@
         gap: 1.5rem;
     }
 
-    .cookie img{
-    height: var(--imgHeight);
-    transition: all 0.3s ease;
-
-    }
-    .cookie:hover{
-        --imgHeight: 27rem
-    }
 
     #cookies{
         display: grid;
@@ -254,6 +296,10 @@
         row-gap: 13rem;
         column-gap: 7rem;
         align-items: center;
+    }
+
+    #menu h3{
+        padding-left: 30px;
     }
 
 
@@ -273,17 +319,12 @@
 
     }
     .menu{
+
         
     }
 
-    .ignoreMix{
-    position: absolute;
-    right: 60rem;
-    bottom: 0rem;
-    }
-    #mixS img{
-        height: 50rem;
-    }
+
+
 
     #mix{
         padding: 0px 10rem 0px 65rem;
@@ -324,7 +365,9 @@
 
 
 
-
+:root {
+--imgHeight: 26rem;
+}
 
 *{
     padding: 0px;
@@ -335,7 +378,13 @@ html{
 
     font-family: Roboto Slab;
     scroll-behavior: smooth;
+    background-color: #FFF7EF;
 
+
+}
+
+html, body {
+    width: 100%;
 }
 
 /* brown #432E22
@@ -346,14 +395,14 @@ logoColor2 #B78D5E */
 
 body{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    justify-self: center;
-    width: 100%;
 }
 
-
+.logo{
+    width: 13.7rem;
+}
 
 h1{
     font-size: 3.5rem;
@@ -397,7 +446,7 @@ main{
     flex-direction: column;
     align-items: center;
 }
-section, header, footer{
+section, footer, header{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -448,22 +497,26 @@ section, header, footer{
 
 
 }
+
 header{
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #432E22;
+}
 
+#headerContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 4.5rem;
 
 }
 .header{
     display: flex;
     justify-content: space-between;
 }
-.header ul{
-    display: flex;
-    flex-direction: row;
-    gap: 4.5rem;
+
+.header{
     list-style-type: none;
 
 }
@@ -479,6 +532,7 @@ header{
     font-size: 1.6rem;
     align-content: center;
     color:#F1C18C;
+    text-decoration: none;
 }
 .header ul li a:hover{
     font-weight: bold;
@@ -491,6 +545,21 @@ header{
     gap: 1.9rem;
 }
 
+#img2 img{
+    width: 32.4rem;
+}
+#img1 img{
+    width: 42.7rem;
+
+}
+
+.menu-button {
+    font-size: 2.4rem;
+    background: none;
+    border: none;
+    color: #F1C18C;  /* same color as your links */
+    cursor: pointer;
+}
 
 
 #heroImg
@@ -549,6 +618,14 @@ justify-content: center;
     box-sizing: border-box
 }
 
+.cookie img{
+height: var(--imgHeight);
+transition: all 0.3s ease;
+
+}
+.cookie:hover{
+    --imgHeight: 27rem
+    }
 
 .cookie p{
     color: #604535;
@@ -585,6 +662,13 @@ justify-content: center;
     align-items: center;
 }
 
+.ignoreMix {
+    height: 55.9rem;
+    width: 55.9rem;
+    position: absolute;
+    right: 60rem;
+    bottom: 0rem;
+    }
 
 #joinPost{
     display: flex;
@@ -656,6 +740,12 @@ input[type="email"]{
     color: #F1C18C;
 
 }
+
+    #footerVector{
+        object-fit: fill;
+        width: 100%;
+
+    }
 
 .footerAll{
     display: flex;
@@ -813,11 +903,13 @@ input[type="email"]{
   padding: 40px 0; /* no side padding — arrows sit at edges */
   text-align: center;
   overflow: hidden;
+  background-color: #FFF7EF;
 }
 
 .slidesWrapper {
   flex: 1;
   position: relative;
+  background-color: #FFF7EF;
 }
 
 .avatarContenr {
@@ -828,8 +920,8 @@ input[type="email"]{
 }
 
 .avatarImg {
-  width: 140px;
-  height: 140px;
+  width: 14rem;
+  height: 14rem;
   object-fit: cover;
   margin-bottom: 20px;
 }
@@ -856,12 +948,12 @@ input[type="email"]{
 
 .prev {
   left: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+  background: linear-gradient(to right, rgba(255, 247, 239, 1), rgba(255, 247, 239, 0));
 }
 
 .next {
   right: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+  background: linear-gradient(to left, rgba(255, 247, 239, 1), rgba(255, 247, 239, 0));
 }
 
 .prev:hover, .next:hover {
