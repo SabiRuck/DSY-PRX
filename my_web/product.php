@@ -50,7 +50,30 @@ if (isset($_GET['pieces'])) {
                     <h4><?php echo ($pieces == 12) 
                         ? $product["price12"] 
                         : $product["price7"]; ?> €</h4>
+
+                     <div class="quantity-counter">
+                        <button type="button" onclick="decreaseQuantity()">-</button>
+                        <input type="text" name="quantity" id="quantityInput" value="1" readonly>
+                        <button type="button" onclick="increaseQuantity()">+</button>
+                    </div>
                 </div>
+
+                <script>
+                    function decreaseQuantity() {
+                        let input = document.getElementById("quantityInput");
+                        let value = parseInt(input.value);
+                        if (value > 1) {
+                            input.value = value - 1;
+                        }
+                    }
+
+                    function increaseQuantity() {
+                        let input = document.getElementById("quantityInput");
+                        let value = parseInt(input.value);
+                        input.value = value + 1;
+                    }
+                </script>
+
 
                 <button type="submit" id="card" name="add" value="1"><h4>ADD TO CART</h4></button> 
             </form>
