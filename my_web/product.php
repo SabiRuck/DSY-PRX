@@ -46,6 +46,7 @@ if (isset($_GET['pieces'])) {
                     </button>
                 </div>
 
+                
                 <div class="price-form">
                     <h4><?php echo ($pieces == 12) 
                         ? $product["price12"] 
