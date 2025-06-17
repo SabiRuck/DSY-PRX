@@ -14,7 +14,7 @@
 </head>
 <body id="top-page">
     <header>
-        <a href="index.php"><div class="header">
+        <a href="index.php"><div class="header container">
 
             <img src="images/logo.png">
             <ul>

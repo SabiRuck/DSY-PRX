@@ -38,8 +38,8 @@ $peopleTexts = [
             <div class="container" id="hero">
             <div id="heroImg">
                 <h1>Cookies so good, you won’t want to share!</h1>
-                <img src="images/heroCookie1.png">
-                <div><img src="images/heroCookie2.png"></div>
+                <div id="img1"><img src="images/heroCookie1.png"></div>
+                <div id="img2"><img src="images/heroCookie2.png"></div>
             </div>
             <div id="heroBottom">
                 <h2>Craving cookies? Our freshly baked treats are just a click away—perfect for any occasion or simply to brighten your day!</h2>
@@ -50,6 +50,8 @@ $peopleTexts = [
             </div>
             </div>
         </section>
+
+        
 
 
        <section id="avatar">
@@ -126,5 +128,5 @@ $peopleTexts = [
         </section>
     </main>
     <footer>
-    <img src="images/vector4.png">
+    <img src="images/vector4.png" id="footerVector">
     <?php include("footer.php")?>

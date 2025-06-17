@@ -1,13 +1,338 @@
-:root {
+@media only screen and (min-width: 960px) {
+
+    html{
+    font-size: 62.5%;
+    }
+  
+    :root {
     --imgHeight: 26rem;
+    }
+
+    #heroImg h1{
+      order: 0;
+        align-self: center;
+
+
+    }
+
+    #img1{
+    order: 1;
+    }
+    #img2{
+    order: 2;
+    }
+
+    section, header, footer{
+    width: 1440px;
+    }
+    .footerC{
+    width: 1440px;
+    }
+    .container{
+    width: 1172px;
+    }
+
+
+    #heroImg
+    {
+        gap: 7.6rem;
+    }
+    #heroS{
+        background-image: url("images/vector1.png");
+        background-size: 100% 100%;
+        height: 625px;
+    }
+    #hero{
+    padding-top: 2rem;
+    }
+
+    #heroBottom{
+    width: 55rem;
+    justify-self: flex-end;
+    margin-top: -3rem;
+    }
+    #heroBottom h2{
+    padding: 1rem 0rem 0rem 4rem;
+    }
+
+
+
+    .slidesWrapper {
+        padding: 0 10rem;
+        width: 95.5rem;
+    }
+    
+    .prev, .next {
+        width: 10rem;
+        font-size: 4rem;
+        }
+
+
+
+    .cookie{
+        padding: 19rem 3rem 3rem 3rem;
+        width: 30rem;
+        gap: 1.5rem;
+    }
+
+    .cookie img{
+    height: var(--imgHeight);
+    transition: all 0.3s ease;
+
+    }
+    .cookie:hover{
+        --imgHeight: 27rem
+    }
+
+    #cookies{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 17rem;
+    column-gap: 12.5rem;
+    align-items: center;
+    }
+
+
+    .ignoreCookie{
+    position: absolute;
+    bottom: 23rem;
+    }
+    #brownie{
+        bottom: 19rem;
+        
+    }
+
+    .ignoreMix{
+        position: absolute;
+        right: 76rem;
+        bottom: 0rem;
+    }
+    #mix{
+
+        padding-left: 65rem;
+        margin: 5rem 0rem;
+    }
+
+
+
+    #menuS{
+        height: 1568px;
+        padding-top: 110px;
+        background-size: 100% 100%;
+
+    }
+
+    input[type="email"]{
+    width: 25rem;
+    }
+
+    #joinS{
+    background-image: url("images/vector3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    }
+    #join {
+    height: 320px;
+    text-align: center;
+    padding-top: 7rem;
+    }
+
+
 }
+
+
+
+
+
+
+@media only screen and (max-width: 959px) {
+
+    html{
+    font-size: 38.4%;
+    }
+
+    :root {
+    --imgHeight: 26rem;
+    }
+
+    .footerC{
+    width: 720px;
+    }
+    #footerVector{
+        object-fit: fill;
+        width: 100%;
+
+    }
+
+     #img1{
+        order: 0;
+    }
+    #img1 img{
+        width: 310px;
+
+    }
+    #heroImg h1 {
+        order: 1;
+        margin: 0px -15px;
+        width: 165px;
+        padding: 40px 10px 20px 10px;
+    }
+    #heroS{
+        background-image: url("images/vector7.png");
+        background-size: 100% 100%;
+        height: 440px;
+        width: 100%;
+
+    }
+    #hero{
+        padding: 2rem 0px 0px 2rem;
+    }
+
+    #img2{
+        order: 2;
+        display: flex;
+        align-items: center;
+        padding-bottom: 5rem;
+    }
+    #img2 img{
+        width: 205px;
+    }
+    #heroImg{
+        height: 380px;
+    }
+    .container{
+    width: 720px;
+    }
+    section, header, footer{
+    width: 720px;
+    }
+    html{
+        width: 720px;
+    }
+
+    #heroBottom{
+    width: 45rem;
+    justify-self: flex-end;
+    margin: -17rem 32rem 0px 0px;
+    align-items: center;
+ 
+    }
+    #heroBottom h2{
+    padding: 1rem 0rem 0rem 3rem;
+    text-align: center;
+    }
+
+    .slidesWrapper {
+        padding: 0 6.23rem;
+        width: 70rem;
+    }
+    .prev, .next {
+        width: 6.23rem;
+        font-size: 4rem;
+    }
+
+    .cookie{
+        padding: 19rem 3rem 3rem 3rem;
+        width: 30rem;
+        gap: 1.5rem;
+    }
+
+    .cookie img{
+    height: var(--imgHeight);
+    transition: all 0.3s ease;
+
+    }
+    .cookie:hover{
+        --imgHeight: 27rem
+    }
+
+    #cookies{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 13rem;
+        column-gap: 7rem;
+        align-items: center;
+    }
+
+
+    .ignoreCookie{
+    position: absolute;
+    bottom: 21rem;
+    }
+    #brownie{
+        bottom: 18rem;
+        
+    }
+
+    #menuS{
+        /* height: 1568px; */
+        padding: 110px 0px 110px 0px;
+        background-size: 100% 100%;
+
+    }
+    .menu{
+        
+    }
+
+    .ignoreMix{
+    position: absolute;
+    right: 60rem;
+    bottom: 0rem;
+    }
+    #mixS img{
+        height: 50rem;
+    }
+
+    #mix{
+        padding: 0px 10rem 0px 65rem;
+        margin: 5rem 0rem;
+    }
+
+    input[type="email"]{
+    width: 35rem;
+    font-size: 1.7rem;
+    }
+
+    #joinS{
+    background-image: url("images/vector3.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    }
+    #join {
+    text-align: center;
+    padding: 7rem 0px 5rem 0px;
+    box-sizing: border-box;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 *{
     padding: 0px;
     margin: 0px;
 }
 html{
-    font-size: 62.5%;
+    /* font-size: 38.4%; */
+
     font-family: Roboto Slab;
     scroll-behavior: smooth;
 
@@ -27,6 +352,9 @@ body{
     justify-self: center;
     width: 100%;
 }
+
+
+
 h1{
     font-size: 3.5rem;
     font-family: "Inria Serif";
@@ -35,29 +363,31 @@ h1{
     color: #432E22;
 }
 h2{
-    font-size: 2.5rem;
+        font-size: 2.5rem;
     font-family: "Inria Serif";
     font-style: italic;
     color: #432E22;
     font-weight: 300;
 }
 h3{
-    font-size: 5.5rem;
+        font-size: 5.5rem;
     font-family: "Inria Serif";
     font-weight: bold;
     font-style: italic;
 }
 h4{
+        font-size: 3.2rem;
+
     font-family: "Inria Serif";
     font-style: italic;
     color: #432E22;
     font-style: normal;
-    font-size: 3.2rem;
     text-align: center;
 }
 h5{
+        font-size: 2.5rem;
+
     font-family: Roboto Slab;
-    font-size: 2.5rem;
     font-weight: normal;
     text-transform: uppercase;
 
@@ -68,16 +398,17 @@ main{
     align-items: center;
 }
 section, header, footer{
-    width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.footerC, .container{
+.footerC{
 
     box-sizing:border-box;
-    width: 1440px;
-    padding: 0px 134px ;
+    padding: 0px 13.4rem ;
+}
+.container{
+    box-sizing:border-box;
 }
 .buttonBrown{
     font-family: Roboto Slab;
@@ -118,16 +449,14 @@ section, header, footer{
 
 }
 header{
-    width: 1440px;
     display: flex;
     align-items: center;
     justify-content: center;
-        background-color: #432E22;
+    background-color: #432E22;
 
 
 }
 .header{
-    width: 1152px;
     display: flex;
     justify-content: space-between;
 }
@@ -162,21 +491,18 @@ header{
     gap: 1.9rem;
 }
 
-main{
-    width: 1172px;
-}
 
 
 #heroImg
 {
     display: flex;
     flex-direction: row;
-    gap: 7.6rem;
 }
 #heroImg h1{
-    align-self: center;
     text-align: center;
+
 }
+
 #heroButtons
 {
     display: flex;
@@ -185,25 +511,14 @@ main{
 
 }
 #heroBottom{
-    width: 55rem;
-    justify-self: flex-end;
-    margin-top: -3rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
-#heroBottom h2{
-    padding: 1rem 0rem 0rem 4rem;
-}
-#hero{
-    padding-top: 2rem;
-}
+
 #heroS{
-    background-image: url("images/vector1.png");
-    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 625px;
 }
 
 #avatar{
@@ -212,25 +527,15 @@ main{
 
 #menuS{
     background-image: url("images/vector2.png");
-      background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-    height: 1568px;
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex;
-    padding-top: 110px;
 }
 #menu{
     display: flex;
     flex-direction: column;
 justify-content: center;
     gap: 13rem;
-}
-#cookies{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 17rem;
-    column-gap: 12.5rem;
-    align-items: center;
 }
 
 .cookie{
@@ -240,20 +545,11 @@ justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 19rem 3rem 3rem 3rem;
-    width: 30rem;
     border-radius: 30px;
-    gap: 1.5rem;
     box-sizing: border-box
 }
-.cookie img{
-    height: var(--imgHeight);
-    transition: all 0.3s ease;
 
-}
-.cookie:hover{
-    --imgHeight: 27rem
-}
+
 .cookie p{
     color: #604535;
     font-family: "Inria Serif";
@@ -272,14 +568,7 @@ justify-content: center;
     display: flex;
     flex-direction: row;
 }
-.ignoreCookie{
-    position: absolute;
-    bottom: 23rem;
-}
-#brownie{
-    bottom: 19rem;
-    
-}
+
 
 
 #mix{
@@ -287,8 +576,6 @@ justify-content: center;
     flex-direction: row;
     align-items: center;
     position: relative;
-    padding-left: 65rem;
-    margin: 5rem 0rem;
 }
 
 #mixText{
@@ -297,21 +584,8 @@ justify-content: center;
     gap: 7rem;
     align-items: center;
 }
-.ignoreMix{
-    position: absolute;
-    right: 76rem;
-    bottom: 0rem;
-}
 
-#join {
-  background-image: url("images/vector3.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 320px;
-  text-align: center;
-  padding-top: 70px;
-}
+
 #joinPost{
     display: flex;
     flex-direction: column;
@@ -337,7 +611,6 @@ input[type="email"]{
     padding: 1rem 0rem 1rem 1rem;
     border-radius: 30px;
     border: none;
-    width: 25rem;
     background-color: #FFF7EF;
 }
 
@@ -427,7 +700,6 @@ input[type="email"]{
     justify-content: space-between;
     padding: 5rem 0rem 0rem 3.5rem;
     box-sizing: border-box;
-    width: 1172px;
     gap: 10rem;
 
 }
@@ -510,7 +782,6 @@ input[type="email"]{
     background-color: #FFF7EF;
 }
 .cookieInfo{
-    width: 1172px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -547,8 +818,6 @@ input[type="email"]{
 .slidesWrapper {
   flex: 1;
   position: relative;
-  padding: 0 100px;
-  width: 95.5rem;
 }
 
 .avatarContenr {
@@ -575,14 +844,12 @@ input[type="email"]{
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   user-select: none;
   z-index: 10;
-  font-size: 40px;
   color: #aaa;
   pointer-events: auto;
 }
