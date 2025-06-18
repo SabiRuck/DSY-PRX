@@ -16,7 +16,7 @@ if (isset($_GET['pieces'])) {
 
 <?php include("header.php") ?>
 
-<main>
+<main id="productMain">
     <section id="cookieMainS">
         <div class="cookieMain">
             <div id="cookiePic"><img src="images/group<?php echo $product["id"]; ?>.png" alt="Image of <?php echo $product["name"]; ?>"></div>
