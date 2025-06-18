@@ -23,6 +23,20 @@
         display: none;
     }
 
+    #cookieMainS{
+    height: 68.2rem;
+    width: 144rem;
+
+    }
+
+    #cookieInfoS{
+    width: 144rem;
+    }
+
+    #productVector{
+    width: 144rem;
+}
+
     
 
 
@@ -137,9 +151,15 @@
     }
 
 
+
 }
 
+@media only screen and (min-width: 720px){
+    .ignoreMix {
+    right: 60rem;
+    }
 
+}
 
 @media only screen and (min-width: 960px) and (max-width: 1140px){
     html{
@@ -207,6 +227,18 @@
         width: 100vw;
     }
 
+    .ignoreMix {
+    right: 80rem;
+    }
+
+    #cookieInfoS{
+    width: 144rem;
+    }
+
+    #productVector{
+    width: 144rem;
+}
+
 
   
 
@@ -249,6 +281,10 @@
     z-index: 1000;  
     }
 
+    h4 {
+    font-size: 2rem;
+    }
+
 
 }
 
@@ -274,6 +310,15 @@
     html{
         width: 720px;
     }
+
+    #cookieInfoS{
+     width: 720px;
+    }
+
+    #productVector{
+    width: 720px;
+    }
+
 
 
 }
@@ -712,7 +757,6 @@ transition: all 0.3s ease;
     height: 55.9rem;
     width: 55.9rem;
     position: absolute;
-    right: 60rem;
     bottom: 0rem;
     }
 
@@ -847,8 +891,7 @@ input[type="email"]{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 682px;
-    width: 1440px;
+    height: 68.2rem;
 }
 
 
@@ -869,7 +912,6 @@ input[type="email"]{
     padding: 1rem 2rem;
     border-radius: 2.4rem;
     border: #432E22 solid 0.2rem;
-    cursor: pointer; 
 }
 #cookiePage button[type="submit"]:hover{
     transition: all 0.3s ease;
@@ -912,12 +954,12 @@ input[type="email"]{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    gap:4rem;
+    gap: 4rem;
 }
 
 #cookieInfoS{
-    width: 1172px;
     background-color: #FFF7EF;
+
 }
 .cookieInfo{
     display: flex;
@@ -927,6 +969,7 @@ input[type="email"]{
     font-family: Roboto Slab;
     font-size: 1.6rem;
     margin: 4rem 0rem;
+    padding: 0px 5rem;
 
 }
 #contains{
@@ -978,6 +1021,8 @@ input[type="email"]{
   font-size: 2rem;
   font-family: "Inria Serif";
 }
+
+
 
 
 .prev, .next {
@@ -1041,8 +1086,8 @@ input[type="email"]{
 
 .quantity-counter button {
     border: none;
-    padding: 5px 10px;
-    font-size: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
     cursor: pointer;
     background-color: transparent;
 }

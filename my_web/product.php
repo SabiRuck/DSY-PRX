@@ -46,7 +46,7 @@ if (isset($_GET['pieces'])) {
                     </button>
                 </div>
 
-                
+
                 <div class="price-form">
                     <h4><?php echo ($pieces == 12) 
                         ? $product["price12"] 
@@ -109,6 +109,6 @@ if (isset($_GET['pieces'])) {
 </main>
 
 <footer>
-    <img src="images/vector5.png" alt="Footer decoration">
+    <img src="images/vector5.png" id="productVector">
     <?php include("footer.php") ?>
 </footer>
