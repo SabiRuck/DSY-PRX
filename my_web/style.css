@@ -342,8 +342,8 @@
         transition: max-height 0.5s ease;
         flex-direction: column;
         position: absolute;
-        top: 8.14rem;
-        right: 12.2rem;
+        top: 8rem;
+        right: 13rem;
         background-color: #432E22;
         padding: 0 1rem;
         gap: 1rem;
@@ -492,7 +492,7 @@
     }
 
     .cookie{
-        padding: 3rem 3rem 3rem 3rem;
+        padding: 19rem 3rem 3rem 3rem;
         width: 30rem;
         gap: 1.5rem;
         border-radius: 12px;
@@ -931,7 +931,7 @@ transition: all 0.3s ease;
 }
 
 #join button[type="submit"]{
-    border: #432E22 solid 2px;
+    border: #432E22 solid 0.4rem;
     border-radius: 30px;
     background-color: #604535;
     color: #FFF7EF;
@@ -1401,7 +1401,9 @@ transition: all 0.3s ease;
 }
 
 
-
+#data input{
+    font-family: "Roboro Slab";
+}
 
 #contacCont label{
     font-size: 1.6rem;

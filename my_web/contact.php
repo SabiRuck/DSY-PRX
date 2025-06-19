@@ -112,7 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
                
             </div>
             
-            <button type="submit">Submit<i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <button type="submit">Submit<i aria-hidden="true"></i>
 	
 	    </button>
         </form>
