@@ -6,10 +6,15 @@
 
 @media only screen and (min-width: 960px) {
 
-    html{
+    /* html{
     font-size: 62.5%;
-    }
+    } */
 
+    
+        #cookieMainS {
+        width: 144rem;
+        height: 68.2rem;
+    }
 
 
     .nav-list {
@@ -93,6 +98,7 @@
         padding: 19rem 3rem 3rem 3rem;
         width: 30rem;
         gap: 1.5rem;
+        border-radius: 30px;
     }
 
 
@@ -128,7 +134,7 @@
 
     }
 
-    input[type="email"]{
+     #join input[type="email"]{
     width: 25rem;
     }
 
@@ -150,7 +156,9 @@
     }
 
    html.product, html.product body {
-    height: 100%;
+    height: 100vw;
+    /* height: auto; !!! */
+
     }
      #cookieInfoS{
         height: 100%;
@@ -174,12 +182,28 @@
     right: 60rem;
     }
 
+    .footerAll {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
 }
 
 @media only screen and (min-width: 960px) and (max-width: 1140px){
     html{
     font-size: 41.66%;
 
+    }
+
+    #pageCookies{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 13rem;
+        column-gap: 7rem;
     }
 
 }
@@ -189,6 +213,18 @@
     font-size: 49.48%;
 
     }
+
+
+    #pageCookies{
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+
+        row-gap: 13rem;
+        column-gap: 7rem;
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+    
 
 }
 
@@ -214,11 +250,20 @@
         gap: 3rem;
     }
 
+
 /* large web*/
 @media only screen and (min-width: 1440px) {
 
     html{
     font-size: 62.5%;
+    }
+
+
+    #pageCookies{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 13rem;
+        column-gap: 7rem;
     }
 
 }
@@ -227,6 +272,19 @@
     html{
     font-size: 0.694vw;
     }
+
+    .footerAll {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+    .footerAll div{
+        justify-content: center;
+        text-align: center;
+    }
+
 
 
     .footerC{
@@ -255,6 +313,12 @@
     height: 68.2rem;
 }
     
+    #pageCookies{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 13rem;
+        column-gap: 7rem;
+    }
 
 
   
@@ -266,7 +330,10 @@
 
 @media only screen and (max-width: 960px) {
 
-    
+    .header{
+        padding: 0 3rem;
+
+    }
 
    .nav-list {
         overflow: hidden;
@@ -351,6 +418,14 @@
     width:  144rem;
     height:68.2rem;
     }
+
+
+    #pageCookies{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 13rem;
+        column-gap: 7rem;
+    }
     
     
 
@@ -397,7 +472,7 @@
     #heroBottom{
     width: 45rem;
     justify-self: flex-end;
-    margin: -17rem 32rem 0px 0px;
+    margin: -17rem 38rem 0px 0px;
     align-items: center;
  
     }
@@ -417,9 +492,10 @@
     }
 
     .cookie{
-        padding: 19rem 3rem 3rem 3rem;
+        padding: 3rem 3rem 3rem 3rem;
         width: 30rem;
         gap: 1.5rem;
+        border-radius: 12px;
     }
 
 
@@ -458,7 +534,7 @@
         margin: 5rem 0rem;
     }
 
-    input[type="email"]{
+    #join input[type="email"]{
     width: 35rem;
     font-size: 1.7rem;
     }
@@ -487,23 +563,49 @@
 
 }
 
-#hIcon svg{
+#hIcon svg:not(#cookieIcon){
     overflow: visible;
 
-width:2.4rem;
-height:2.4rem;
+    width:2.6rem;
+    height:2.6rem;
   display: inline-block;
 
 }
 
-#hIcon svg path{
-    width:2.4rem;
-height:2.4rem;
+#basketIcons{
+    position: relative;
+}
+
+#backetIcon{
+        z-index: 2;
+        position: relative;
+
+}
+ #cookieIcon{
+       overflow: visible;
+
+    width:1.3rem;
+    height:1.3rem;
+  display: inline-block;
+
+  position: absolute;
+  left:var(--cookieLft);
+  bottom: var(--cookieBtm);
+  z-index: 1;
+      transition: all 0.3s ease;
+
+ }
+
+#basketIcons:hover{
+    --cookieBtm: 1rem;
+
 }
 
 
 :root {
 --imgHeight: 26rem;
+  --cookieLft:0.5rem;
+  --cookieBtm: 3rem;
 }
 
 *{
@@ -595,6 +697,9 @@ section, footer, header{
 }
 .container{
     box-sizing:border-box;
+}
+button:hover{
+    cursor: pointer;
 }
 .buttonBrown{
     font-family: Roboto Slab;
@@ -697,9 +802,12 @@ header{
 }
 #heroImg h1{
     text-align: center;
+    padding: 10rem 3rem 0 3rem;
 
 }
-
+.aboutText{
+    padding: 0 2rem;
+}
 #heroButtons
 {
     display: flex;
@@ -729,7 +837,7 @@ header{
 #menu{
     display: flex;
     flex-direction: column;
-justify-content: center;
+    justify-content: center;
     gap: 13rem;
 }
 
@@ -740,7 +848,6 @@ justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 30px;
     box-sizing: border-box
 }
 
@@ -816,7 +923,7 @@ transition: all 0.3s ease;
     font-size: 2rem;
 }
 
-input[type="email"]{
+#join input[type="email"]{
     padding: 1rem 0rem 1rem 1rem;
     border-radius: 30px;
     border: none;
@@ -837,22 +944,26 @@ input[type="email"]{
     color: #432E22;
     transition: all 0.3s ease;
 }
-
 .footerC a{
     text-decoration: none;
+    transition: all 0.3s ease;
 
 }
 
 .footerC a:hover{
     color: rgba(96, 69, 53, 1);
-    transition: all 0.3s ease;
 }
-.footerC a:not(.footerMedia a), mail{
+.footerC a, mail{
     font-family: Roboto Slab;
     font-size: 1.6rem;
     color:#F1C18C;
     padding: 0.5rem 1rem;
 }
+.footerMedia a{
+    font-size: 2.5rem;
+    padding: 0px;
+}
+
 
 .footerC{
     display: flex;
@@ -872,12 +983,7 @@ input[type="email"]{
 
     }
 
-.footerAll{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
+
 .footerAll h5{
     color: #F1C18C;
     padding: 0.5rem 1rem;
@@ -885,7 +991,6 @@ input[type="email"]{
 .footerMedia{
     display: flex;
     flex-direction: row;
-    font-size: 2.5rem;
     gap: 2.5rem
 }
 .footerAll > div:not(.footerMedia){
@@ -1136,7 +1241,10 @@ input[type="email"]{
 }
 
 
+#aboutS h1{
+    margin: 4rem 0;
 
+}
 #aboutTexts p {
   font-size: 1.6rem;
   font-family: "Roboto Slab", serif;
@@ -1147,8 +1255,7 @@ input[type="email"]{
 
 #anoutUl {
   list-style: none;
-  margin: 0 auto;
-  max-width: 1100px;
+  max-width: 1172px;
   gap: 3rem;
   display: flex;
   flex-direction: column;
@@ -1162,39 +1269,49 @@ input[type="email"]{
   margin-bottom: 3rem;
 }
 
-#anoutUl li:nth-child(even):not(#aboutOneTxt) {
-  grid-template-columns: 1fr 1fr;
-  direction: rtl; 
-}
-
-#anoutUl li:nth-child(even):not(#aboutOneTxt) img {
-  direction: ltr; 
-}
 
 #aboutOneTxt {
   font-style: italic;
   font-size: 1.8rem;
   text-align: center;
   max-width: 600px;
-  margin: 0 auto 4rem auto;
-  color: #6b4c3b;
+  margin-bottom:4rem ;
+  align-self: center;
+  color: #604535;
 }
 
-#aboutS img {
+
+#aboutS img{
+  display: block;
+  border-radius: 1.2rem;
+  box-shadow: 0 0.8rem 1.5rem rgba(0,0,0,0.1);
+  border: #432E22 solid 0.3rem;
+}
+
+.aboutBorderImg{
+    background-color: rgba(241,193,140,0.4);
+    padding: 2rem;
+    border-radius: 1.2rem;
+    display: inline-block;     
+    line-height: 0; 
+
+
+}
+
+#aboutS img:not(#aboutBigImg) {
   max-width: 100%;
   height: auto;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-#aboutS img:hover {
-  transform: scale(1.05);
 }
 
 
-@media (max-width: 768px) {
+#aboutBigImg{
+    height: 55rem;
+    justify-self: center;
+    
+}
+
+
+/* @media (max-width: 768px) {
   #anoutUl li:not(#aboutOneTxt) {
     grid-template-columns: 1fr;
     text-align: center;
@@ -1208,4 +1325,167 @@ input[type="email"]{
     font-size: 1.5rem;
     margin-bottom: 3rem;
   }
+} */
+
+
+
+    .pageCookie{
+        padding: 3rem 3rem 3rem 3rem;
+        width: 30rem;
+        gap: 1.5rem;
+        border-radius: 12px;
+        border: #F1C18C solid 3px;
+        position: relative;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box
+    }
+
+
+    #pageCookies{
+        display: grid;
+        align-items: center;
+    }
+
+
+#menuPageS{
+    background-color: rgba(241, 193, 140, 0.7);
+
+
+}
+html.menu footer{
+    background-color: rgba(241, 193, 140, 0.7);
+}
+.pageCookie .buttonWhite{
+    background-color: transparent;
+}
+
+.pageCookie .buttonWhite:hover{
+    background-color:  rgba(96, 69, 53, 0.4);
+    border-color: #432E22;
+    color: #432E22;
+    }
+
+.pageCookie img{
+height: var(--imgHeight);
+transition: all 0.3s ease;
+
+}
+.pageCookie:hover{
+    --imgHeight: 27rem;
+    border-color: #432E22;
+    border-width: 4px;
+    background-color: rgba(96, 69, 53, 0.2);
+    }
+
+.pageCookie p{
+    color: #604535;
+    font-family: "Inria Serif";
+    font-size: 2rem;
+
+}
+.pageCookie button{
+    width: 100%;
+    background-color: transparent;
+}
+.pageFrom{
+    font-weight: bold;
+    color: #432E22;
+}
+
+.pagePrice{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+#contacCont label{
+    font-size: 1.6rem;
+    font-family: "Inria Serif";
+}
+#contactMain{
+    width: 100%;
+}
+#contacCont{
+    width: 40%;
+}
+.contactLabels{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+#contacCont button[type="submit"] {
+    border: #432E22 solid 2px;
+    border-radius: 30px;
+    background-color: #604535;
+    color: #FFF7EF;
+    padding: 1rem 2.5rem;
+    font-family: "Roboto Slab";
+    font-size: 1.6rem;
+}
+
+.inputs{
+    width: 50rem;
+    padding: 1rem 0rem 1rem 1rem;
+    border-radius: 3rem;
+    border: none;
+    background-color: #FFF7EF;
+    font-size: 1.6rem;
+}
+#contactTitle p{
+    font-size: 1.4rem;
+}
+#contactTitle h1{
+    font-style: normal;
+}
+#contactTitle{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap:0.8rem;
+}
+#data{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+label{
+    font-size: 1.2rem;
+}
+h1{
+    font-size: 2.5rem;
+}
+textarea{
+    resize: none;
+    font-family: "Roboto Slab";
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+#contacCont{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    gap: 4rem;
+    padding: 3rem;
+    margin: 2rem 0;
+    background-color: rgba(96, 69, 53, 0.2);;
+}
+
+.good{
+    border-color: #F6F6F6;
+
+}
+.error{
+    border-color: red;
+    background-color: #fcf5f5;
+
 }

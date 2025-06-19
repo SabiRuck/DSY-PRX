@@ -5,7 +5,7 @@
                     <h5>info</h5>
                     <a href="#">Delivery</a>
                     <a href="#">FAQs</a>
-                    <a href="#">About us</a>
+                    <a href="aboutUs.php">About us</a>
                 </div>
                 <div class="footerContact">
                     <h5>contact us</h5>
@@ -30,7 +30,4 @@
                 <p>&copy2024 COOKIE CRAVINGS. ALL RIGHTS RESERVED.</p>
             </div>
         </div>
-    </footer>
 
-</body>
-</html>

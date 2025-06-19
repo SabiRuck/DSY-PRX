@@ -112,3 +112,5 @@ if (isset($_GET['pieces'])) {
     <img src="images/vector5.png" id="productVector">
     <?php include("footer.php") ?>
 </footer>
+</body>
+</html>

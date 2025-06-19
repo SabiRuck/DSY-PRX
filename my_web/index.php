@@ -44,8 +44,8 @@ $peopleTexts = [
             <div id="heroBottom">
                 <h2>Craving cookies? Our freshly baked treats are just a click away—perfect for any occasion or simply to brighten your day!</h2>
                 <div id="heroButtons">
-                    <button class="buttonBrown">Order Now</button>
-                    <button class="buttonBrown">Shop Our Cookies</button>
+                    <a href="#"><button class="buttonBrown">Order Now</button></a>
+                    <a href="menu.php"><button class="buttonBrown">Shop Our Cookies</button></a>
                 </div>
             </div>
             </div>
@@ -128,5 +128,9 @@ $peopleTexts = [
         </section>
     </main>
     <footer>
-    <img src="images/vector4.png" id="footerVector">
-    <?php include("footer.php")?>
+        <img src="images/vector4.png" id="footerVector">
+        <?php include("footer.php")?>
+    </footer>
+
+</body>
+</html>
